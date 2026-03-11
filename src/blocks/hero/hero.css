@@ -1,0 +1,29 @@
+.hero {
+    width: 100%;
+    min-height: calc(100dvh - 34px);
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 795px;
+    flex: 0 0 auto;
+}
+
+.hero__title {
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 85%;
+}
+
+.hero__text {
+    max-width: 640px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+}

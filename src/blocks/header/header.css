@@ -1,0 +1,36 @@
+.header {
+    position: relative;
+    width: 100%;
+    padding: 9px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header__container_right {
+    justify-content: flex-end;
+}
+
+.header__item {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.header__item_bold {
+    font-weight: 700;
+}
+
