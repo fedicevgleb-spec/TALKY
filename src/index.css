@@ -2,12 +2,15 @@
 @import url('./vendors/fonts.css');
 @import url('./blocks/header/header.css');
 @import url('./blocks/hero/hero.css');
+@import url('./blocks/videoScreen/videoScreen.css');
 :root {
   --color-primary-white: #F7F7F7;
+  --color-secondary-white: #D1D1D1;
   --color-primary-gray: #7C7C7C;
   --color-primary-black: #000000;
   --color-primary-blue: #0D6FFF;
   --color-primary-pink: #F03CCE; 
+  --color-pink-60: #F363D8; 
   background-color: var(--color-primary-black);
   color: var(--color-primary-white);
   font-family: 'SF Pro Display', 'Arial', sans-serif;
@@ -73,7 +76,7 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: var(--color-primary-black);
+  /* background-color: var(--color-primary-black); */
 }
 
 
