@@ -1,0 +1,108 @@
+.supportScreen {
+    width: 100%;
+    padding: 0 50px;
+}
+
+.supportScreen__inner {
+    background-color: var(--color-secondary-black);
+    border: 1px solid var(--color-primary-gray);
+    border-radius: 40px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.supportScreen__content {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+.supportScreen__title {
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 80%;
+}
+
+.supportScreen__text {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    max-width: 660px;
+}
+
+.supportScreen__feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 44px;
+}
+
+.supportScreen__featureIcon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    flex-shrink: 0;
+    color: var(--color-primary-white);
+}
+
+.supportScreen__featureText {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--color-primary-blue);
+}
+
+/* --- 24h card --- */
+
+.supportScreen__card {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    width: auto;
+    min-height: 0;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 49px;
+    padding: 36px;
+    border: 1px solid var(--color-primary-blue);
+    border-radius: 20px;
+}
+
+.supportScreen__cardText {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    max-width: 243px;
+    text-align: center;
+}
+
+.supportScreen__hours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.supportScreen__hoursNumber {
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 1;
+}
+
+.supportScreen__hoursLabel {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80%;
+}

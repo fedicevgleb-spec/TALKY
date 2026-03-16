@@ -3,11 +3,19 @@
 @import url('./blocks/header/header.css');
 @import url('./blocks/hero/hero.css');
 @import url('./blocks/videoScreen/videoScreen.css');
+@import url('./blocks/invisibleScreen/invisibleScreen.css');
+@import url('./blocks/featuresScreen/featuresScreen.css');
+@import url('./blocks/pricingScreen/pricingScreen.css');
+@import url('./blocks/supportScreen/supportScreen.css');
+@import url('./blocks/faqScreen/faqScreen.css');
+@import url('./blocks/footer/footer.css');
 :root {
   --color-primary-white: #F7F7F7;
   --color-secondary-white: #D1D1D1;
+  --color-tertiary-white: #FFFFFF;
   --color-primary-gray: #7C7C7C;
   --color-primary-black: #000000;
+  --color-secondary-black: #121213;
   --color-primary-blue: #0D6FFF;
   --color-primary-pink: #F03CCE; 
   --color-pink-60: #F363D8; 

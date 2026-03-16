@@ -1,0 +1,85 @@
+.pricingScreen {
+    width: 100%;
+    padding: 200px 114px 143px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.pricingScreen__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.pricingScreen__title {
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 80%;
+}
+
+.pricingScreen__title span {
+    color: var(--color-primary-blue);
+}
+
+.pricingScreen__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.pricingScreen__subtitle span {
+    font-size: 20px;
+}
+
+.pricingScreen__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 180px;
+    gap: 20px;
+    width: 100%;
+    list-style: none;
+    list-style-type: none;
+}
+
+.pricingScreen__card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--color-primary-gray);
+    border-radius: 22px;
+    position: relative;
+}
+
+.pricingScreen__cardIcon {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+.pricingScreen__cardLabel {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.pricingScreen__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.pricingScreen__note {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-primary-gray);
+}
