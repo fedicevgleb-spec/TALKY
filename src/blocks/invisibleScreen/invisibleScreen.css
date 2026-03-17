@@ -12,12 +12,48 @@
     width: 100%;
     max-width: 900px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .invisibleScreen__title {
+    position: relative;
     font-weight: 600;
     font-size: 75px;
     line-height: 65px;
+    max-width: 650px;
+    text-align: center;
+    align-self: center;
+    padding-bottom: 10px;
+}
+
+.invisibleScreen__titleDefault {
+    color: var(--color-primary-blue);
+    cursor: default;
+    opacity: .75;
+}
+
+.invisibleScreen__titleHighlight {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #ff9ec5, #c4a5ff, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    pointer-events: none;
+    mask-image: radial-gradient(
+        /* circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), */
+        circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        black,
+        transparent
+    );
+    -webkit-mask-image: radial-gradient(
+        /* circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), */
+        circle 120px at var(--mouse-x, 20%) var(--mouse-y, 20%),
+        black,
+        transparent
+    );
 }
 
 .invisibleScreen__info {
