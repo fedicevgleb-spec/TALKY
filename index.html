@@ -60,7 +60,11 @@
     <!-- 1 hero -->
     <section class="hero">
       <div class="hero__container">
-        <h1 class="hero__title">Speak naturally.<br>Stay on script.</h1>
+        <div class="hero__titleWrapper">
+          <h1 class="hero__title">Speak naturally.</h1>
+          <span class="hero__title hero__title_add">Stay on script.</span>
+        </div>
+        <!-- <h1 class="hero__title">Speak naturally.<br><span>Stay on script.</span></h1> -->
         <div class="hero__textWrapper">
           <p class="hero__text">
             <span class="logo">Talk<span>Y</span></span> is a simple teleprompter for macOS that helps you stay focused
@@ -110,7 +114,7 @@
         <p class="invisibleScreen__text">It does not appear in screen recordings or screen sharing, so your audience
           sees only your presentation, demo, or video.</p>
       </div>
-      <ol class="invisibleScreen__cards">
+      <ul class="invisibleScreen__cards">
         <li class="invisibleScreen__card">
           <div class="invisibleScreen__cardContent">
             <div class="invisibleScreen__cardIcon">
@@ -139,7 +143,7 @@
             <span class="invisibleScreen__cardLabel">Online meetings</span>
           </div>
         </li>
-      </ol>
+      </ul>
     </section>
 
     <!-- block 4: macOS features -->
@@ -163,7 +167,7 @@
           </div>
         </div>
         <div class="featuresScreen__info">
-          <ol class="featuresScreen__tags">
+          <ul class="featuresScreen__tags">
             <li class="featuresScreen__tag">
               <div class="featuresScreen__tagIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -202,7 +206,7 @@
               </div>
               Clean distraction-free interface
             </li>
-          </ol>
+          </ul>
           <p class="featuresScreen__footnote">Built specifically for macOS 14.7 or later.</p>
 
         </div>
@@ -215,7 +219,7 @@
         <h2 class="pricingScreen__title">Simple pricing.<br /><span>No subscriptions.</span></h2>
         <p class="pricingScreen__subtitle"><span class="logo">Talk<span>Y</span></span> for macOS</p>
       </div>
-      <ol class="pricingScreen__cards">
+      <ul class="pricingScreen__cards">
         <li class="pricingScreen__card">
           <div class="pricingScreen__cardIcon"></div>
           <span class="pricingScreen__cardLabel">Full app access</span>
@@ -232,7 +236,7 @@
           <div class="pricingScreen__cardIcon"></div>
           <span class="pricingScreen__cardLabel">No recurring payments</span>
         </li>
-      </ol>
+      </ul>
       <div class="pricingScreen__cta">
         <button class="purchaseButton">
           <span class="purchaseButton__text">
@@ -277,37 +281,53 @@
         <details class="faqScreen__item">
           <summary class="faqScreen__question">
             <span>How do I install <span class="logo">Talk<span>Y</span></span> after purchase?</span>
-            <span class="faqScreen__icon">+</span>
+            <span class="faqScreen__icon"></span>
           </summary>
-          <div class="faqScreen__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+          <ul class="faqScreen__answer">
+            <li >After completing your purchase, you will receive an email with a download link.</li>
+            <li>Download the ZIP file, extract it, and move <span class="logo"style="font-size: inherit; color: var(--color-primary-white)">Talk<span>Y</span></span> to your Applications folder.</li>
+          </ul>
         </details>
         <details class="faqScreen__item">
           <summary class="faqScreen__question">
             <span>Will I receive updates to the app?</span>
-            <span class="faqScreen__icon">+</span>
+            <span class="faqScreen__icon"></span>
           </summary>
-          <div class="faqScreen__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+          <ul class="faqScreen__answer">
+            <li >Yes. <span class="logo"style="font-size: inherit; color: var(--color-primary-white)">Talk<span>Y</span></span> is actively maintained and improved.</li>
+            <li>Whenever a new version is released, you will receive an email with a link to download the updated version.</li>
+            <li>All updates are included with your one-time purchase.</li>
+          </ul>
         </details>
         <details class="faqScreen__item">
           <summary class="faqScreen__question">
             <span>Is there customer support if I need help?</span>
-            <span class="faqScreen__icon">+</span>
+            <span class="faqScreen__icon"></span>
           </summary>
-          <div class="faqScreen__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+          <ul class="faqScreen__answer">
+            <li >Yes. Support is available to all  <span class="logo"style="font-size: inherit; color: var(--color-primary-white)">Talk<span>Y</span></span> users.</li>
+            <li>If you have any issues or questions, you can contact the developers directly.</li>
+            <li>We guarantee a response within 24 hours.</li>
+          </ul>
         </details>
         <details class="faqScreen__item">
           <summary class="faqScreen__question">
             <span>Is <span class="logo">Talk<span>Y</span></span> a subscription?</span>
-            <span class="faqScreen__icon">+</span>
+            <span class="faqScreen__icon"></span>
           </summary>
-          <div class="faqScreen__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+          <ul class="faqScreen__answer">
+            <li >No. <span class="logo"style="font-size: inherit; color: var(--color-primary-white)">Talk<span>Y</span></span> is a one-time purchase.</li>
+            <li>You pay $24.50 once and can use the app forever.</li>
+          </ul>
         </details>
         <details class="faqScreen__item">
           <summary class="faqScreen__question">
             <span>Does <span class="logo">Talk<span>Y</span></span> work on Windows?</span>
-            <span class="faqScreen__icon">+</span>
+            <span class="faqScreen__icon"></span>
           </summary>
-          <div class="faqScreen__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+          <ul class="faqScreen__answer">
+            <li >No. <span class="logo"style="font-size: inherit; color: var(--color-primary-white)">Talk<span>Y</span></span> is built specifically for macOS and requires macOS 14.7 or later.</li>
+          </ul>
         </details>
       </div>
     </section>
@@ -316,10 +336,10 @@
   <!-- footer -->
   <footer class="footer">
     <div class="footer__inner">
-        <h2 class="footer__title">
-          <span class="logo">Talk<span>Y</span></span> — Teleprompter<br/> for macOS
-        </h2>
-        <p class="footer__note">macOS 14.7 or later</p>
+      <h2 class="footer__title">
+        <span class="logo">Talk<span>Y</span></span> — Teleprompter<br /> for macOS
+      </h2>
+      <p class="footer__note">macOS 14.7 or later</p>
     </div>
     <nav class="footer__nav">
       <a href="#" class="footer__navItem">Support</a>
