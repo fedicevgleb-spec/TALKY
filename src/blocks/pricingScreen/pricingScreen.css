@@ -15,10 +15,32 @@
     text-align: center;
 }
 
+.pricingScreen__titleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .pricingScreen__title {
     font-weight: 600;
     font-size: 75px;
-    line-height: 80%;
+    line-height: 110%;
+    filter: drop-shadow(0 -2px 3px rgba(180, 180, 180, .9));
+    background-image: linear-gradient(180deg, #FFFFFF 30%, #B4B4B4 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.pricingScreen__titleAdd {
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 110%;
+    filter: drop-shadow(0 -2px 3px rgba(13, 190, 255, .8));
+    background-image: linear-gradient(180deg, #0DBEFF 30%, #0D6FFF 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-top: -20px;
 }
 
 .pricingScreen__title span {

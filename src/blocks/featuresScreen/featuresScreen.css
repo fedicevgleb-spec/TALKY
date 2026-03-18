@@ -1,6 +1,16 @@
 .featuresScreen {
     width: 100%;
     padding: 90px 20px 0;
+    position: relative;
+
+}
+
+.featuresScreen__bg {
+    width: calc(100% - 40px);
+    height: auto;
+    position: absolute;
+    top: 85%;
+    z-index: -1;
 }
 
 .featuresScreen__inner {
@@ -14,12 +24,23 @@
     gap: 80px;
 }
 
+.featuresScreen__headingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
 .featuresScreen__heading {
     font-weight: 600;
     font-size: 75px;
-    line-height: 80%;
-    margin-bottom: 50px;
+    line-height: 110%;
     text-align: center;
+    filter: drop-shadow(0 -1px 2px rgba(13, 111, 255, 0.5));
+    background-image: linear-gradient(180deg, #404040 30%, #1E1E1E 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .featuresScreen__content {
