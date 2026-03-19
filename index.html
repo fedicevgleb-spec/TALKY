@@ -124,28 +124,36 @@
       <ul class="invisibleScreen__cards">
         <li class="invisibleScreen__card">
           <div class="invisibleScreen__cardContent">
-            <div class="invisibleScreen__cardIcon">
+            <div class="invisibleScreen__cardIcon"
+              style="--bg-width: 200%; --bg-height: 200%; --bg-pos-left: -50%; --bg-pos-top: -50%;">
+              <img src="/third_block_icon_1.png" width="64" height="50" alt="">
             </div>
             <span class="invisibleScreen__cardLabel">Recording tutorials</span>
           </div>
         </li>
         <li class="invisibleScreen__card">
           <div class="invisibleScreen__cardContent">
-            <div class="invisibleScreen__cardIcon">
+            <div class="invisibleScreen__cardIcon"
+              style="--bg-pos-left: -10%; --bg-pos-top: -55%; --bg-width: 150%; --bg-height: 150%;">
+              <img src="/third_block_icon_2.png" width="41" height="50" alt="">
             </div>
             <span class="invisibleScreen__cardLabel">Product demos</span>
           </div>
         </li>
         <li class="invisibleScreen__card">
           <div class="invisibleScreen__cardContent">
-            <div class="invisibleScreen__cardIcon">
+            <div class="invisibleScreen__cardIcon"
+              style="--bg-pos-left: 3%; --bg-pos-top: -50%; --bg-width: 150%; --bg-height: 150%;">
+              <img src="/third_block_icon_3.png" width="66" height="50" alt="">
             </div>
             <span class="invisibleScreen__cardLabel">Presentations</span>
           </div>
         </li>
         <li class="invisibleScreen__card">
           <div class="invisibleScreen__cardContent">
-            <div class="invisibleScreen__cardIcon">
+            <div class="invisibleScreen__cardIcon"
+              style="--bg-pos-left: 0%; --bg-pos-top: 0%; --bg-width: 150%; --bg-height: 150%;">
+              <img src="/third_block_icon_4.png" width="54" height="50" alt="">
             </div>
             <span class="invisibleScreen__cardLabel">Online meetings</span>
           </div>
@@ -155,7 +163,8 @@
 
     <!-- block 4: macOS features -->
     <section class="featuresScreen">
-        <img src="/features_block_bg.webp" srcset="/features_block_bg.png" width="1440" height="526" alt="" class="featuresScreen__bg">
+      <img src="/features_block_bg.webp" srcset="/features_block_bg.png" width="1440" height="526" alt=""
+        class="featuresScreen__bg">
       <div class="featuresScreen__inner">
         <div class="featuresScreen__headingWrapper">
           <h2 class="featuresScreen__heading">A teleprompter</h2>
@@ -179,16 +188,21 @@
         </div>
         <div class="featuresScreen__info">
           <ul class="featuresScreen__tags">
-            <li class="featuresScreen__tag">
-              <div class="featuresScreen__tagIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 19V5M5 12l7-7 7 7" />
-                </svg>
+            <li class="featuresScreen__tagWrapper">
+              <div class="featuresScreen__tagBackground"></div>
+              <div class="featuresScreen__tag">
+                <div class="featuresScreen__tagIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                  </svg>
+                </div>
+                Smooth scrolling
               </div>
-              Smooth scrolling
             </li>
-            <li class="featuresScreen__tag">
+            <li class="featuresScreen__tagWrapper">
+              <div class="featuresScreen__tagBackground"></div>
+              <div class="featuresScreen__tag">
               <div class="featuresScreen__tagIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -197,8 +211,11 @@
                 </svg>
               </div>
               Adjustable speed
+              </div>
             </li>
-            <li class="featuresScreen__tag">
+            <li class="featuresScreen__tagWrapper">
+              <div class="featuresScreen__tagBackground"></div>
+              <div class="featuresScreen__tag">
               <div class="featuresScreen__tagIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -208,7 +225,9 @@
               </div>
               Always on top
             </li>
-            <li class="featuresScreen__tag">
+            <li class="featuresScreen__tagWrapper">
+              <div class="featuresScreen__tagBackground"></div>
+              <div class="featuresScreen__tag">
               <div class="featuresScreen__tagIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -216,6 +235,7 @@
                 </svg>
               </div>
               Clean distraction-free interface
+              </div>
             </li>
           </ul>
           <p class="featuresScreen__footnote">Built specifically for macOS 14.7 or later.</p>

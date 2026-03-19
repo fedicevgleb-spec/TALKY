@@ -44,17 +44,15 @@
     color: transparent;
     pointer-events: none;
     mask-image: radial-gradient(
-        /* circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), */
-        circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        black,
-        transparent
-    );
+            /* circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), */
+            circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            black,
+            transparent);
     -webkit-mask-image: radial-gradient(
-        /* circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), */
-        circle 120px at var(--mouse-x, 20%) var(--mouse-y, 20%),
-        black,
-        transparent
-    );
+            /* circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), */
+            circle 120px at var(--mouse-x, 20%) var(--mouse-y, 20%),
+            black,
+            transparent);
 }
 
 .invisibleScreen__info {
@@ -115,19 +113,28 @@
     padding: 32px;
 }
 
-.invisibleScreen__cardContent img {
-   border: 1px solid red;
+.invisibleScreen__cardIcon {
+    width: fit-content;
+    position: relative;
+    --bg-pos-left: 0px;
+    --bg-pos-top: 0px;
+    --bg-width: 100%;
+    --bg-height: 100%;
+}
+.invisibleScreen__cardIcon img {
+    position: relative;
+    z-index: 1;
 }
 
-.invisibleScreen__cardIcon {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    color: var(--color-primary-white);
+.invisibleScreen__cardIcon:before {
+    content: '';
+    position: absolute;
+    top: var(--bg-pos-top);
+    left: var(--bg-pos-left);
+    width: var(--bg-width);
+    height: var(--bg-height);
+    background-image: radial-gradient(circle at center, rgba(16,110,252, .25) 0%, transparent 60%);
+    z-index: 0;
 }
 
 .invisibleScreen__cardLabel {
