@@ -1,11 +1,12 @@
 .videoScreen {
     width: 100%;
-    padding: 65px 75px 65px 95px;
+    padding: 165px 75px 165px 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
     position: relative;
+    overflow: visible;
 }
 
 .videoScreen__videoWrapper {
