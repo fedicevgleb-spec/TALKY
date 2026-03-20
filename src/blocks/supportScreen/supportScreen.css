@@ -85,8 +85,8 @@
     align-items: center;
     justify-content: center;
     gap: 49px;
-    padding: 36px;
-    border: 1px solid var(--color-primary-blue);
+    /* padding: 36px; */
+    /* border: 1px solid var(--color-primary-blue); */
     border-radius: 20px;
 }
 
