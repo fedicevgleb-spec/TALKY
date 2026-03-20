@@ -12,6 +12,14 @@
     grid-template-columns: 1fr auto;
     align-items: stretch;
     gap: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.supportScreen__video {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    object-fit: cover;
 }
 
 .supportScreen__content {
@@ -88,6 +96,8 @@
     /* padding: 36px; */
     /* border: 1px solid var(--color-primary-blue); */
     border-radius: 20px;
+    border: 1px solid red;
+    overflow: hidden;
 }
 
 .supportScreen__cardText {
