@@ -9,6 +9,7 @@
 @import url('./blocks/supportScreen/supportScreen.css');
 @import url('./blocks/faqScreen/faqScreen.css');
 @import url('./blocks/footer/footer.css');
+
 :root {
   --color-primary-white: #F7F7F7;
   --color-secondary-white: #D1D1D1;
@@ -17,8 +18,8 @@
   --color-primary-black: #000000;
   --color-secondary-black: #121212;
   --color-primary-blue: #0D6FFF;
-  --color-primary-pink: #F03CCE; 
-  --color-pink-60: #F363D8; 
+  --color-primary-pink: #F03CCE;
+  --color-pink-60: #F363D8;
   background-color: var(--color-primary-black);
   color: var(--color-primary-white);
   font-family: 'SF Pro Display', 'Arial', sans-serif;
@@ -27,6 +28,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  position: relative;
 }
 
 /* --- RESET */
@@ -82,10 +87,24 @@ a {
 main,
 body {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
-  /* background-color: var(--color-primary-black); */
+  position: relative;
 }
 
+.mainWrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  
+}
 
-
+.footerVideo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  object-fit: fill;
+  max-height: 600px;
+}
