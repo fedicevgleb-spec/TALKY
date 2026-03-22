@@ -105,7 +105,7 @@
     height: 160px;
     border-bottom-left-radius: 13px;
     border-bottom-right-radius: 13px;
-    background-image: radial-gradient(at bottom, var(--color-primary-blue) -50%, transparent 90%);
+    background-image: radial-gradient(at bottom, var(--color-primary-blue) -50%, transparent 80%);
 }
 
 /* button */
