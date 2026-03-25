@@ -102,9 +102,10 @@
       </section>
       <!-- 2 video screen -->
       <section class="videoScreen">
-        <video src="/borders_x1.mp4" width="935" height="659" autoplay muted loop playsinline preload="auto"></video>
+        <video class="videoScreen__bgVideo" src="/borders_x1.mp4" width="935" height="659" autoplay muted loop playsinline preload="auto"></video>
         <div class="videoScreen__videoWrapper">
-          <img src="/video_test.avif" width="815" height="529" alt="">
+          <video src="/main_video.MOV" class="videoScreen__mainVideo" width="3840" height="2136" autoplay muted loop playsinline preload="auto"></video>
+          <!-- <img src="/video_test.avif" width="815" height="529" alt=""> -->
         </div>
         <div class="videoScreen__textWrapper">
           <h2 class="videoScreen__title">
@@ -118,7 +119,9 @@
         </div>
       </section>
       <!-- block 3: invisible in screen recordings -->
+      <video class="invisibleScreen__video" src="/invisible_block_video.mp4" width="935" height="659" autoplay muted loop playsinline preload="auto"></video>
       <section class="invisibleScreen">
+       
         <div class="invisibleScreen__header">
           <h2 class="invisibleScreen__title" data-spotlight>
             <span class="invisibleScreen__titleDefault">Invisible in screen<br>recordings</span>

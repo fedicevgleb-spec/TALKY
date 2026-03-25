@@ -9,6 +9,11 @@
     position: relative;
 }
 
+.invisibleScreen__video {
+    width: 100%;
+}
+
+
 .invisibleScreen__header {
     width: 100%;
     max-width: 900px;
@@ -88,6 +93,7 @@
     padding: 0;
     margin-top: 20px;
 }
+
 
 .invisibleScreen__card {
     width: 100%;
