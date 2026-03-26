@@ -84,30 +84,6 @@
     z-index: -2;
 }
 
-.hero__topGradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 2%;
-    background-image: linear-gradient(to bottom, var(--color-primary-blue) -100%, transparent 100%);
-    opacity: .25;
-}
-
-.hero__telepromter {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-primary-black);
-    width: 400px;
-    height: 160px;
-    border-bottom-left-radius: 13px;
-    border-bottom-right-radius: 13px;
-    background-image: radial-gradient(at bottom, var(--color-primary-blue) -50%, transparent 80%);
-}
-
 /* button */
 
 .purchaseButton {
