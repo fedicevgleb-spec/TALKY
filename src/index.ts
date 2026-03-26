@@ -1,3 +1,9 @@
+import { initInvisibleScreenCardGradient } from './invisibleScreenCardGradient';
+import { initVideoMainViewportVolume } from './videoMainViewportVolume';
+
+initVideoMainViewportVolume();
+initInvisibleScreenCardGradient();
+
 const purchaseButtonWrapper = document.querySelectorAll<HTMLElement>('#purchase-button-wrapper');
 const purchaseButtonSpotlightLeft = document.querySelectorAll<HTMLElement>('#purchase-button-spotlight-left');
 const purchaseButtonSpotlightRight = document.querySelectorAll<HTMLElement>('#purchase-button-spotlight-right');

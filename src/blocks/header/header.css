@@ -101,7 +101,7 @@
 }
 
 .header__telepromterTrack {
-    animation: header-teleprompter-scroll 90s linear infinite;
+    animation: header-teleprompter-scroll 60s linear infinite;
 }
 
 .header__telepromterColumn {

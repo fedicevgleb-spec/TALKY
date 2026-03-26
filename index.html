@@ -145,8 +145,10 @@
         <video class="videoScreen__bgVideo" src="/borders_x1.mp4" width="935" height="659" autoplay muted loop
           playsinline preload="auto"></video>
         <div class="videoScreen__videoWrapper">
-          <video src="/main_video.MOV" class="videoScreen__mainVideo" width="3840" height="2136" autoplay muted loop
-            playsinline preload="auto"></video>
+          <video class="videoScreen__mainVideo" width="3840" height="2136" autoplay muted loop playsinline>
+            <source src="/talky_main.mp4" type="video/mp4">
+            <source src="/talky_main.webm" type="video/webm">
+          </video>
         </div>
         <div class="videoScreen__textWrapper">
           <h2 class="videoScreen__title">
@@ -160,10 +162,8 @@
         </div>
       </section>
       <!-- block 3: invisible in screen recordings -->
-      <video class="invisibleScreen__video" src="/invisible_block_video.mp4" width="935" height="659" autoplay muted
-        loop playsinline preload="auto"></video>
       <section class="invisibleScreen">
-
+        <img src="/invisible_block_bg.png" class="invisibleScreen__bg" width="1718" height="742">
         <div class="invisibleScreen__header">
           <h2 class="invisibleScreen__title" data-spotlight>
             <span class="invisibleScreen__titleDefault">Invisible in screen<br>recordings</span>
@@ -178,40 +178,52 @@
             sees only your presentation, demo, or video.</p>
         </div>
         <ul class="invisibleScreen__cards">
-          <li class="invisibleScreen__card">
-            <div class="invisibleScreen__cardContent">
-              <div class="invisibleScreen__cardIcon"
-                style="--bg-width: 200%; --bg-height: 200%; --bg-pos-left: -50%; --bg-pos-top: -50%;">
-                <img src="/third_block_icon_1.png" width="64" height="50" alt="">
+          <li class="invisibleScreen__cardWrap">
+            <div class="invisibleScreen__cardGlow" aria-hidden="true"></div>
+            <div class="invisibleScreen__card">
+              <div class="invisibleScreen__cardContent">
+                <div class="invisibleScreen__cardIcon"
+                  style="--bg-width: 200%; --bg-height: 200%; --bg-pos-left: -50%; --bg-pos-top: -50%;">
+                  <img src="/third_block_icon_1.png" width="64" height="50" alt="">
+                </div>
+                <span class="invisibleScreen__cardLabel">Recording tutorials</span>
               </div>
-              <span class="invisibleScreen__cardLabel">Recording tutorials</span>
             </div>
           </li>
-          <li class="invisibleScreen__card">
-            <div class="invisibleScreen__cardContent">
-              <div class="invisibleScreen__cardIcon"
-                style="--bg-pos-left: -10%; --bg-pos-top: -55%; --bg-width: 150%; --bg-height: 150%;">
-                <img src="/third_block_icon_2.png" width="41" height="50" alt="">
+          <li class="invisibleScreen__cardWrap">
+            <div class="invisibleScreen__cardGlow" aria-hidden="true"></div>
+            <div class="invisibleScreen__card">
+              <div class="invisibleScreen__cardContent">
+                <div class="invisibleScreen__cardIcon"
+                  style="--bg-pos-left: -10%; --bg-pos-top: -55%; --bg-width: 150%; --bg-height: 150%;">
+                  <img src="/third_block_icon_2.png" width="41" height="50" alt="">
+                </div>
+                <span class="invisibleScreen__cardLabel">Product demos</span>
               </div>
-              <span class="invisibleScreen__cardLabel">Product demos</span>
             </div>
           </li>
-          <li class="invisibleScreen__card">
-            <div class="invisibleScreen__cardContent">
-              <div class="invisibleScreen__cardIcon"
-                style="--bg-pos-left: 3%; --bg-pos-top: -50%; --bg-width: 150%; --bg-height: 150%;">
-                <img src="/third_block_icon_3.png" width="66" height="50" alt="">
+          <li class="invisibleScreen__cardWrap">
+            <div class="invisibleScreen__cardGlow" aria-hidden="true"></div>
+            <div class="invisibleScreen__card">
+              <div class="invisibleScreen__cardContent">
+                <div class="invisibleScreen__cardIcon"
+                  style="--bg-pos-left: 3%; --bg-pos-top: -50%; --bg-width: 150%; --bg-height: 150%;">
+                  <img src="/third_block_icon_3.png" width="66" height="50" alt="">
+                </div>
+                <span class="invisibleScreen__cardLabel">Presentations</span>
               </div>
-              <span class="invisibleScreen__cardLabel">Presentations</span>
             </div>
           </li>
-          <li class="invisibleScreen__card">
-            <div class="invisibleScreen__cardContent">
-              <div class="invisibleScreen__cardIcon"
-                style="--bg-pos-left: 0%; --bg-pos-top: 0%; --bg-width: 150%; --bg-height: 150%;">
-                <img src="/third_block_icon_4.png" width="54" height="50" alt="">
+          <li class="invisibleScreen__cardWrap">
+            <div class="invisibleScreen__cardGlow" aria-hidden="true"></div>
+            <div class="invisibleScreen__card">
+              <div class="invisibleScreen__cardContent">
+                <div class="invisibleScreen__cardIcon"
+                  style="--bg-pos-left: 0%; --bg-pos-top: 0%; --bg-width: 150%; --bg-height: 150%;">
+                  <img src="/third_block_icon_4.png" width="54" height="50" alt="">
+                </div>
+                <span class="invisibleScreen__cardLabel">Online meetings</span>
               </div>
-              <span class="invisibleScreen__cardLabel">Online meetings</span>
             </div>
           </li>
         </ul>
