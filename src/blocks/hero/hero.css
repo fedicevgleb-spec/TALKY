@@ -5,7 +5,8 @@
     align-items: center;
     padding: 50px;
     position: relative;
-    overflow: clip;
+
+    @media (max-width: 1440px) {}
 
     @media (max-width: 1024px) {
         padding: 16px;
@@ -48,6 +49,7 @@
     @media (max-width: 1024px) {
         font-size: 70px;
     }
+
     @media (max-width: 640px) {
         font-size: 40px;
         filter: drop-shadow(0 -1px 2px rgba(180, 180, 180, .9));
@@ -56,9 +58,11 @@
 
 .hero__title_add {
     margin-top: -25px;
+
     @media (max-width: 1024px) {
-            margin-top: -15px;
+        margin-top: -15px;
     }
+
     @media (max-width: 640px) {
         margin-top: -10px;
     }
@@ -79,6 +83,7 @@
     @media (max-width: 1024px) {
         font-size: 17px;
     }
+
     @media (max-width: 640px) {
         font-size: 14px;
         max-width: 320px;
@@ -89,47 +94,42 @@
     color: var(--color-primary-gray)
 }
 
-.hero__imageWrapper {
+.hero__videoWrapper {
     position: absolute;
     inset: 0;
-    overflow: visible;
-    z-index: -1;
-    transform: translateX(25%);
+    /* overflow: hidden; */
+    z-index: -2;
     display: flex;
 
     @media (max-width: 640px) {
         flex: 1 0 690px;
         transform: translateX(0);
         position: static;
-       max-height: 60dvh;
+        max-height: 60dvh;
     }
 }
 
-.hero__imageWrapper:after {
-    background-image: radial-gradient(circle at center, transparent 5%, var(--color-primary-black) 75%);
+/* .hero__videoWrapper::after {
     content: '';
     position: absolute;
     inset: 0;
-}
-.hero__imageWrapper:before {
-    background-image: radial-gradient(circle at center, transparent 0%, var(--color-primary-black) 75%);
-    content: '';
-    position: absolute;
-    inset: 0;
-}
+    background-image: linear-gradient(to right, transparent 85%, var(--color-primary-black) 95%);
+    z-index: 1;
 
-.hero__imageWrapper img {
+    @media (max-width: 1440px) {
+        display: none;
+    }
+} */
+
+.hero__waterfall {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .9;
-    z-index: -2;
-
-    @media (max-width: 640px) {
-        height: 100%;
-        widht: auto;
-        object-position: bottom center;
-    }
+    object-position: center center;
+    border: 1px solid green;
+    transform: translateX(25%);
+    mask-image: radial-gradient(circle at center, var(--color-primary-black) 45%, transparent 60%);
 }
 
 /* logo */
@@ -141,6 +141,7 @@
     @media (max-width: 1024px) {
         font-size: 19px;
     }
+
     @media (max-width: 640px) {
         font-size: 16px;
     }
