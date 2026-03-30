@@ -1,6 +1,13 @@
 .supportScreen {
     width: 100%;
     padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+        padding: 0 16px;
+    }
 }
 
 .supportScreen__inner {
@@ -14,12 +21,41 @@
     gap: 24px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        max-width: 65%;
+    }
+
+    @media (max-width: 790px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        max-width: 100%;
+        padding: 10px;
+    }
 }
 .supportScreen__video {
     position: absolute;
     top: -30px;
     right: -30px;
     object-fit: cover;
+
+    @media (max-width: 1024px) {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: -30px;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    @media (max-width: 520px) {
+        position: static;
+        width: 50%;
+    }
 }
 
 .supportScreen__content {
@@ -28,11 +64,43 @@
     flex-direction: column;
     gap: 24px;
     min-width: 0;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 1320px) {
+        padding: 20px;
+        gap: 12px;
+    }
+    @media (max-width: 1024px) {
+       padding-bottom: 0;
+    }
 }
 
 .supportScreen__titleWrapper {
     display: flex;
     flex-direction: column;
+}
+
+.supportScreen__titleWrapper_desktop {
+    @media (max-width: 1340px) {
+        display: none;
+    }
+}
+.supportScreen__titleWrapper_mobile {
+    display: none;
+    @media (max-width: 1340px) {
+        display: flex;
+    }
+}
+
+.supportScreen__title_add {
+    margin-top: -20px;
+    @media (max-width: 1024px) {
+        margin-top: -15px;
+    }
+    @media (max-width: 640px) {
+        margin-top: -10px;
+    }
 }
 
 .supportScreen__title {
@@ -44,6 +112,14 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @media (max-width: 1024px) {
+        font-size: 58px;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+        filter: drop-shadow(0 -1px 2px rgba(180, 180, 180, .9));
+    }
 }
 
 .supportScreen__text {
@@ -51,6 +127,17 @@
     font-size: 32px;
     line-height: 100%;
     max-width: 660px;
+
+    @media (max-width: 1320px) {
+        max-width: 500px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 25px;
+    }
+    @media (max-width: 640px) {
+        font-size: 18px;
+    }
 }
 
 .supportScreen__feature {
@@ -58,6 +145,10 @@
     align-items: center;
     gap: 12px;
     margin-top: 44px;
+
+    @media (max-width: 1320px) {
+        margin-top: 22px;
+    }
 }
 
 .supportScreen__featureIcon {

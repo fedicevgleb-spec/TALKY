@@ -3,6 +3,9 @@
     padding: 90px 20px 0;
     position: relative;
 
+    @media (max-width: 640px) {
+        padding: 90px 8px 0;
+    }
 }
 
 .featuresScreen__bg {
@@ -11,6 +14,14 @@
     position: absolute;
     top: 85%;
     z-index: -1;
+
+    @media (max-width: 900px) {
+        top: 95%;
+    }
+    @media (max-width: 640px) {
+        width: calc(100% - 16px);
+        top: 98%;
+    }
 }
 
 .featuresScreen__inner {
@@ -22,6 +33,17 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
+
+    @media (max-width: 1320px) {
+        padding: 50px 20px 20px;
+        gap: 40px;
+    }
+    @media (max-width: 900px) {
+       border-radius: 20px;
+    }
+    @media (max-width: 640px) {
+        padding: 24px 16px 20px;
+    }
 }
 
 .featuresScreen__headingWrapper {
@@ -29,6 +51,23 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 0;
+    }
+}
+
+.featuresScreen__headingWrapper_desktop {
+    @media (max-width: 450px) {
+        display: none;
+    }
+}
+
+.featuresScreen__headingWrapper_mobile {
+    display: none;
+    @media (max-width: 450px) {
+        display: flex;
+    }
 }
 
 .featuresScreen__heading {
@@ -41,6 +80,15 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @media (max-width: 1024px) {
+        font-size: 58px;
+        line-height: 120%;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+        line-height: 140%;
+    }
 }
 
 .featuresScreen__content {
@@ -48,12 +96,34 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: start;
+
+    @media (max-width: 1320px) {
+        gap: 30px;
+    }
+    @media (max-width: 1024px) {
+        gap: 20px;
+    }
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        max-width: 65%;
+        gap: 34px;
+    }
+    @media (max-width: 700px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        max-width: 100%;
+    }
 }
 
 .featuresScreen__mockupWrapper {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media (max-width: 900px) {
+        gap: 12px;
+    }
 }
 
 .featuresScreen__mockupWrapper img {
@@ -70,12 +140,30 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+
+    @media (max-width: 900px) {
+        max-width: 65%;
+    }
+    @media (max-width: 700px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .featuresScreen__text {
     font-weight: 500;
     font-size: 28px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 21px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
 }
 
 .featuresScreen__text span {
@@ -89,6 +177,26 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 167px;
     gap: 32px;
+
+    @media (max-width: 1320px) {
+        gap: 20px;
+    }
+    @media (max-width: 1200px) {
+        grid-template-rows: 140px;
+        grid-auto-rows: 140px;
+    }
+    @media (max-width: 1320px) {
+        gap: 16px;
+    }
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 12px;
+        row-gap: 24px;
+    }
+    @media (max-width: 450px) {
+        grid-template-rows: 125px;
+        grid-auto-rows: 125px;
+    }
 }
 
 .featuresScreen__tagWrapper {
@@ -102,6 +210,18 @@
 }
 .featuresScreen__tagWrapper:nth-of-type(even) {
     filter: drop-shadow(0 15px 10px rgba(0, 103, 255, 1));
+}
+.featuresScreen__tagWrapper:nth-child(3) {
+    @media (max-width: 900px) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+}
+.featuresScreen__tagWrapper:nth-child(4) {
+    @media (max-width: 900px) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
 }
 
 .featuresScreen__tag {
@@ -122,6 +242,21 @@
     opacity: 0.95;
     position: relative;
     overflow: hidden;
+
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+.featuresScreen__tag img {
+    @media (max-width: 640px) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .featuresScreen__tagIconBg {
@@ -208,4 +343,11 @@
     font-size: 16px;
     font-weight: 500;
     color: var(--color-primary-gray);
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+    @media (max-width: 640px) {
+        font-size: 12px;
+    }
 }

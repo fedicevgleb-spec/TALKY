@@ -7,6 +7,8 @@ const pricingScreenPurchaseButton = document.querySelector<HTMLElement>('#pricin
 const pricingScreenPurchaseButtonSpotlight = pricingScreenPurchaseButton?.querySelector<HTMLElement>('#pricingScreenPurchaseButtonSpotlight');
 const invisibleScreenTitle = document.querySelector<HTMLElement>('#invisibleScreenTitle');
 const purchaseButtonMouseMoveHandler = (e: MouseEvent, el: HTMLElement | null) => {
+  const clientWidth = window.innerWidth;
+  if (clientWidth < 1024) return;
   if (!el) return;
   const purchaseButtonWrapper = el.querySelectorAll<HTMLElement>('#purchase-button-wrapper');
   const purchaseButtonSpotlightLeft = el.querySelectorAll<HTMLElement>('#purchase-button-spotlight-left');

@@ -6,6 +6,7 @@ export function initVideoMainViewportVolume(): void {
   const node = document.querySelector(MAIN_VIDEO_SELECTOR);
   if (!(node instanceof HTMLVideoElement)) return;
   const el = node;
+  
 
   let lastIntersectionRatio = 1;
   const maxVolume = 1;
@@ -26,7 +27,6 @@ export function initVideoMainViewportVolume(): void {
   );
 
   observer.observe(el);
-
   el.addEventListener('click', () => {
     el.muted = !el.muted;
     applyVolume();

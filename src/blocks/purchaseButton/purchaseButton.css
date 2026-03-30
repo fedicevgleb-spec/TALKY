@@ -14,6 +14,11 @@
     border-radius: 100px;
     width: 100%;
     min-width: 255px;
+
+    @media (max-width: 1024px) {
+        padding: 2px 2px 2px 15px;
+        min-width: 210px;
+    }
 }
 
 .purchaseButton__layoutWrapper {
@@ -32,6 +37,10 @@
     padding-left: 5px;
     padding-right: 5px;
     position: relative;
+
+    @media (max-width: 1024px) {
+        padding: 0;
+    }
 }
 
 .purchaseButton__spotlight {
@@ -44,6 +53,10 @@
     border-radius: 55px;
     z-index: -1;
     filter: blur(2px);
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 .purchaseButton__spotlight_right {
     position: absolute;
@@ -55,6 +68,10 @@
     border-radius: 55px;
     z-index: -1;
     filter: blur(2px);
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .purchaseButton__glare {
@@ -78,6 +95,10 @@
     filter: blur(5px) saturate(1.2);
     opacity: .88;
     mix-blend-mode: screen;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .purchaseButton__content {
@@ -95,17 +116,31 @@
     font-size: 16px;
     line-height: 100%;
     color: var(--color-primary-black);
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+    @media (max-width: 640px) {
+        font-size: 12px;
+    }
 }
 
 .purchaseButton__wrapper {
     font-weight: 600;
-    font-size: 21px;
+    font-size: 22px;
     line-height: 100%;
     color: var(--color-primary-black);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 8px;
+
+    @media (max-width: 1024px) {
+        font-size: 19px;
+    }
+    @media (max-width: 640px) {
+        font-size: 16px;
+    }
 }
 
 .purchaseButton__wrapper::after {
@@ -120,4 +155,9 @@
     color: var(--color-primary-white);
     transform: rotate(-45deg);
     border: 1px solid var(--color-pink-60);
+
+    @media (max-width: 1024px) {
+        height: 30px;
+        width: 30px;
+    }
 }

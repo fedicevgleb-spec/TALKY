@@ -5,7 +5,16 @@
     align-items: center;
     padding: 50px;
     position: relative;
-    overflow: clip
+    overflow: clip;
+
+    @media (max-width: 1024px) {
+        padding: 16px;
+    }
+
+    @media (max-width: 640px) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
 }
 
 .hero__container {
@@ -15,6 +24,10 @@
     width: 100%;
     max-width: 795px;
     flex: 0 0 auto;
+
+    @media (max-width: 640px) {
+        gap: 12px;
+    }
 }
 
 .hero__titleWrapper {
@@ -31,10 +44,24 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @media (max-width: 1024px) {
+        font-size: 70px;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+        filter: drop-shadow(0 -1px 2px rgba(180, 180, 180, .9));
+    }
 }
 
 .hero__title_add {
     margin-top: -25px;
+    @media (max-width: 1024px) {
+            margin-top: -15px;
+    }
+    @media (max-width: 640px) {
+        margin-top: -10px;
+    }
 }
 
 .hero__textWrapper {
@@ -48,6 +75,14 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+        max-width: 320px;
+    }
 }
 
 .hero__text_sub {
@@ -61,6 +96,13 @@
     z-index: -1;
     transform: translateX(25%);
     display: flex;
+
+    @media (max-width: 640px) {
+        flex: 1 0 690px;
+        transform: translateX(0);
+        position: static;
+       max-height: 60dvh;
+    }
 }
 
 .hero__imageWrapper:after {
@@ -82,6 +124,12 @@
     object-fit: cover;
     opacity: .9;
     z-index: -2;
+
+    @media (max-width: 640px) {
+        height: 100%;
+        widht: auto;
+        object-position: bottom center;
+    }
 }
 
 /* logo */
@@ -89,6 +137,13 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 19px;
+    }
+    @media (max-width: 640px) {
+        font-size: 16px;
+    }
 }
 
 .logo span {

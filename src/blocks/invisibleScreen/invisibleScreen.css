@@ -7,15 +7,39 @@
     align-items: center;
     gap: 80px;
     position: relative;
+
+    @media (max-width: 1024px) {
+        padding: 150px 16px 50px;
+        overflow: hidden;
+    }
+    @media (max-width: 640px) {
+        gap: 40px;
+    }
 }
 
 .invisibleScreen__bg {
-    transform: scale(1);
     top: -225px;
     width: 100%;
     height: 100%;
     z-index: -1;
     position: absolute;
+
+    @media (max-width: 1024px) {
+        top: -300px;
+        min-width: 1000px;
+    }
+    @media (max-width: 640px) {
+        top: -250px;
+        min-width: 750px;
+    }
+    @media (max-width: 500px) {
+        top: -200px;
+        min-width: 750px;
+    }
+    @media (max-width: 400px) {
+        top: -180px;
+        min-width: 750px;
+    }
 }
 
 
@@ -38,7 +62,15 @@
     max-width: 650px;
     text-align: center;
     align-self: center;
-    padding-bottom: 10px;
+
+    @media (max-width: 1024px) {
+        font-size: 58px;
+        padding-bottom: 0;
+        line-height: 90%;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+    }
 }
 
 .invisibleScreen__titleDefault {
@@ -78,12 +110,31 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
 }
 
 .invisibleScreen__text {
     font-weight: 500;
     font-size: 32px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 25px;
+        max-width: 65%;
+    }
+    @media (max-width: 750px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        font-size: 18px;
+        max-width: 100%;
+    }
 }
 
 .invisibleScreen__cards {
@@ -97,6 +148,18 @@
     margin: 0;
     padding: 0;
     margin-top: 20px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 65%;
+    }
+    @media (max-width: 750px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        max-width: 100%;
+        gap: 16px;
+    }
 }
 
 
@@ -137,6 +200,10 @@
     background-color: var(--color-secondary-black);
     border-radius: 32px;
     background-image: radial-gradient(100% 100% at var(--grad-x, 0%) var(--grad-y, 100%), #0067FF 0%, #F1FFA2 50%, #FF5EF7 100%);
+    @media (max-width: 640px) {
+        border-radius: 19px;
+        padding: 3px;
+    }
 }
 
 .invisibleScreen__cardContent {
@@ -148,6 +215,14 @@
     background-color: var(--color-secondary-black);
     border-radius: 26px;
     padding: 32px;
+
+    @media (max-width: 1024px) {
+        padding: 24px;
+    }
+    @media (max-width: 640px) {
+        padding: 16px;
+        border-radius: 16px;
+    }
 }
 
 .invisibleScreen__cardIcon {
@@ -157,6 +232,12 @@
     --bg-pos-top: 0px;
     --bg-width: 100%;
     --bg-height: 100%;
+
+    @media (max-width: 400px) {
+       transform: scale(0.5);
+       left: -10%;
+       top: -10%;
+    }
 }
 .invisibleScreen__cardIcon img {
     position: relative;
@@ -178,4 +259,11 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 20px;
+    }
+    @media (max-width: 640px) {
+        font-size: 15px;
+    }
 }

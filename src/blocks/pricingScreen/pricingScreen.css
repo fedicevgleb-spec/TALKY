@@ -5,6 +5,13 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
+    @media (max-width: 1024px) {
+       gap: 40px;
+       padding: 200px 20px 60px;
+    }
+    @media (max-width: 640px) {
+       gap: 40px;
+    }
 }
 
 .pricingScreen__header {
@@ -13,6 +20,10 @@
     align-items: center;
     gap: 24px;
     text-align: center;
+
+    @media (max-width: 640px) {
+        gap: 12px;
+    }
 }
 
 .pricingScreen__titleWrapper {
@@ -30,6 +41,14 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @media (max-width: 1024px) {
+        font-size: 58px;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+        filter: drop-shadow(0 -1px 2px rgba(180, 180, 180, .9));
+    }
 }
 
 .pricingScreen__titleAdd {
@@ -42,6 +61,15 @@
     background-clip: text;
     color: transparent;
     margin-top: -20px;
+    @media (max-width: 1024px) {
+        font-size: 58px;
+        margin-top: -15px;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+        margin-top: -10px;
+        filter: drop-shadow(0 -1px 2px rgba(13, 190, 255, .8));
+    }
 }
 
 .pricingScreen__title span {
@@ -52,6 +80,12 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 100%;
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
 }
 
 .pricingScreen__subtitle span {
@@ -66,6 +100,23 @@
     width: 100%;
     list-style: none;
     list-style-type: none;
+
+    @media (max-width: 1024px) {
+        gap: 15px;
+    }
+    @media (max-width: 850px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 135px;
+        grid-auto-rows: 135px;
+        max-width: 65%;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 80%;
+    }
+    @media (max-width: 600px) {
+        max-width: 100%;
+    }
 }
 
 .pricingScreen__cardWrapper {
@@ -80,6 +131,18 @@
     padding: 20px;
     border: 1px solid #FFFFFF33;
     border-radius: 22px;
+
+    @media (max-width: 850px) {
+        padding: 15px;
+        border-radius: 16px;
+    }
+}
+
+.pricingScreen__cardWrapper img {
+    @media (max-width: 850px) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .pricingScreen__card {
@@ -103,6 +166,19 @@
 
 .pricingScreen__card:nth-of-type(even) {
     box-shadow: 0px 0px 20px 0px #E670E066 inset;
+}
+
+.pricingScreen__card:nth-child(3) {
+    @media (max-width: 850px) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3
+    }
+}
+.pricingScreen__card:nth-child(4) {
+    @media (max-width: 850px) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2
+    }
 }
 
 .pricingScreen__cardGlare {
@@ -223,6 +299,12 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
 }
 
 .pricingScreen__cta {
@@ -230,10 +312,22 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
+
+    @media (max-width: 640px) {
+        gap: 16px;
+    }
 }
 
 .pricingScreen__note {
     font-size: 16px;
     font-weight: 500;
     color: var(--color-primary-gray);
+    text-align: center;
+
+    @media (max-width: 1024px) {
+        font-size: 12px;
+    }
+    @media (max-width: 640px) {
+        font-size: 10px;
+    }
 }
