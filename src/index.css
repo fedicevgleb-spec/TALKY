@@ -92,7 +92,7 @@ body {
   position: relative;
 }
 
-body {
+body > div {
   overflow-x: hidden;
 }
 
