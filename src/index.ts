@@ -1,5 +1,6 @@
 import { initFeaturesScreenTeleprompter } from './featuresScreenTeleprompter';
 import { initInvisibleScreenCardGradient } from './invisibleScreenCardGradient';
+import { initVideoSecondaryDeferredLoad } from './videoSecondaryDeferredLoad';
 import { initVideoMainViewportVolume } from './videoMainViewportVolume';
 
 const heroScreenPurchaseButton = document.querySelector<HTMLElement>('#heroScreenPurchaseButton');
@@ -50,6 +51,16 @@ const purchaseButtonMouseMoveHandler = (e: MouseEvent, el: HTMLElement | null) =
   el.style.setProperty('--mouse-y', `${top}px`);
 }
 
+function initHeroWaterfallPlaceholder(): void {
+  const wrapper = document.querySelector('.hero__videoWrapper');
+  const video = document.querySelector<HTMLVideoElement>('.hero__waterfall');
+  if (!wrapper || !video) return;
+  const reveal = () => wrapper.classList.add('hero__videoWrapper--videoReady');
+  video.addEventListener('canplaythrough', reveal, { once: true });
+}
+
+initHeroWaterfallPlaceholder();
+initVideoSecondaryDeferredLoad();
 initVideoMainViewportVolume();
 initInvisibleScreenCardGradient();
 initFeaturesScreenTeleprompter();

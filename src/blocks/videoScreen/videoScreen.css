@@ -62,6 +62,7 @@
 }
 
 .videoScreen__mainVideoWrapper {
+    position: relative;
     flex: 0 0 auto;
     width: 815px;
     max-width: 815px;
@@ -74,6 +75,35 @@
         height: 100%;
         border-radius: 8px;
     }
+}
+
+.videoScreen__muteIndicator {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--color-tertiary-white);
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    pointer-events: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+
+    @media (max-width: 850px) {
+        right: 8px;
+        bottom: 8px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.videoScreen__muteIndicator[hidden] {
+    display: none;
 }
 
 .videoScreen__mainVideo {

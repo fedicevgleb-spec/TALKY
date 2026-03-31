@@ -9,6 +9,7 @@ export function initVideoMainViewportVolume(): void {
   const node = document.querySelector(MAIN_VIDEO_SELECTOR);
   if (!(node instanceof HTMLVideoElement)) return;
   const el = node;
+  const muteIndicator = document.querySelector<HTMLElement>('#videoScreenMuteIndicator');
 
   const useMobilePause = window.matchMedia(MOBILE_PLAYBACK_MQ).matches;
 
@@ -44,10 +45,18 @@ export function initVideoMainViewportVolume(): void {
     { root: null, threshold: THRESHOLDS }
   );
 
+  function syncMuteIndicator(): void {
+    if (!muteIndicator) return;
+    muteIndicator.toggleAttribute('hidden', !el.muted);
+  }
+
   observer.observe(el);
+  syncMuteIndicator();
+
   el.addEventListener('click', () => {
     el.muted = !el.muted;
     applyVolume();
+    syncMuteIndicator();
     void el.play();
   });
 }

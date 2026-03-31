@@ -114,12 +114,13 @@
 }
 
 .hero__waterfall {
+    position: relative;
+    z-index: 0;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    border: 1px solid green;
     transform: translateX(25%);
     mask-image: radial-gradient(circle at center, var(--color-primary-black) 45%, transparent 60%);
 
@@ -130,6 +131,51 @@
     }
 
     @media (max-width: 640px) {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transform: none;
+        mask-image: none;
+    }
+}
+
+.hero__waterfallPlaceholder {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.35s ease;
+}
+
+.hero__videoWrapper--videoReady .hero__waterfallPlaceholder {
+    opacity: 0;
+}
+
+.hero__waterfallPlaceholder_desktop {
+    transform: translateX(25%);
+    mask-image: radial-gradient(circle at center, var(--color-primary-black) 45%, transparent 60%);
+
+    @media (max-width: 1200px) {
+        width: 110%;
+        height: 110%;
+        transform: translateX(25%) translateY(-10%);
+    }
+
+    @media (max-width: 640px) {
+        display: none;
+    }
+}
+
+.hero__waterfallPlaceholder_mobile {
+    display: none;
+
+    @media (max-width: 640px) {
+        display: block;
         width: 100%;
         height: auto;
         object-fit: cover;

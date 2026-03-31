@@ -150,21 +150,35 @@
               <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 640px)">
               <source src="/waterfall.mp4" type="video/mp4">
             </video>
+            <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop" src="/placeholders/waterfall_placeholder.avif"
+              alt="" decoding="async" fetchpriority="high" aria-hidden="true">
+            <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_mobile" src="/placeholders/waterfall_mobile_placeholder.avif"
+              alt="" decoding="async" fetchpriority="high" aria-hidden="true">
           </div>
         </section>
         <!-- 2 video screen -->
         <section class="videoScreen">
           <div class="videoScreen__videoBlock">
-            <video class="videoScreen__bgVideo" src="/borders_x1.mp4" width="935" height="659" autoplay muted loop
-              playsinline preload="auto"></video>
+            
             <div class="videoScreen__videoWrapper">
               <div class="videoScreen__mainVideoWrapper">
                 <video class="videoScreen__mainVideo" width="815" height="529" autoplay muted loop playsinline>
                   <source src="/talky_main.mp4" type="video/mp4">
                   <source src="/talky_main.webm" type="video/webm">
                 </video>
+                <div class="videoScreen__muteIndicator" id="videoScreenMuteIndicator" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <line x1="22" y1="9" x2="16" y2="15" />
+                    <line x1="16" y1="9" x2="22" y2="15" />
+                  </svg>
+                </div>
               </div>
             </div>
+            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline
+              preload="none" data-deferred-src="/borders_x1.mp4"></video>
           </div>
           <div class="videoScreen__textWrapper">
             <h2 class="videoScreen__title">
@@ -181,15 +195,9 @@
         <!-- block 3: invisible in screen recordings -->
         <section class="invisibleScreen">
           <div class="invisibleScreen__bgVideoWrapper">
-            <video src="/lamps_test.mp4" class="invisibleScreen__bgVideo" autoplay muted loop playsinline></video>
+            <video class="invisibleScreen__bgVideo" autoplay muted loop playsinline preload="none"
+              data-deferred-src="/lamps_test.mp4" poster="/placeholders/lamps_test_placeholder.avif"></video>
           </div>
-          <!-- <img src="/invisible_block_bg.png" class="invisibleScreen__bg" width="1718" height="742">
-          <div class="invisibleScreen__header">
-            <h2 class="invisibleScreen__title" id="invisibleScreenTitle">
-              <span class="invisibleScreen__titleDefault">Invisible in screen<br>recordings</span>
-              <span class="invisibleScreen__titleHighlight" aria-hidden="true">Invisible in screen<br>recordings</span>
-            </h2>
-          </div> -->
           <div class="invisibleScreen__info">
             <p class="invisibleScreen__subtitle">
               <span class="logo">Talk<span>Y</span></span> stays visible only to you.
@@ -540,9 +548,9 @@
             </div>
             <div class="supportScreen__videoMobileWrapper">
               <video class="supportScreen__video" width="524" height="524" autoplay muted loop playsinline
-                preload="auto">
-                <source src="/24_h_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-                <source src="/24_h_v2_x2.mp4" type="video/mp4">
+                preload="none" poster="/placeholders/24_h_v2_placeholder.avif">
+                <source data-deferred-src="/24_h_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
+                <source data-deferred-src="/24_h_v2_x2.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -653,7 +661,8 @@
       </footer>
       <script type="module" src="/src/index.ts"></script>
     </div>
-    <video src="/footer_v1.mp4" width="1440" height="539" class="footerVideo" autoplay muted loop playsinline></video>
+    <video class="footerVideo" width="1440" height="539" muted loop playsinline preload="none"
+      data-deferred-src="/footer_v1.mp4" poster="/placeholders/footer_v1_placeholder.avif"></video>
   </div>
 </body>
 
