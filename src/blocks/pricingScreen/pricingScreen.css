@@ -158,6 +158,11 @@
     backdrop-filter: blur(15.5px);
     position: relative;
     overflow: hidden;
+    transition: transform 0.15s ease-in-out;
+}
+
+.pricingScreen__card:hover {
+    transform: translateY(-5px);
 }
 
 .pricingScreen__card:nth-of-type(odd) {

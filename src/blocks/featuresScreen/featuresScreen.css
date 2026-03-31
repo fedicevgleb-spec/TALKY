@@ -203,6 +203,12 @@
     position: relative;
     width: 100%;
     height: 100%;
+    transform: translateY(0);
+    transition: transform 0.15s ease-in-out;
+}
+
+.featuresScreen__tagWrapper:hover {
+    transform: translateY(-5px);
 }
 
 .featuresScreen__tagWrapper:nth-of-type(odd) {

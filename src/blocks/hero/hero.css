@@ -130,17 +130,11 @@
     }
 
     @media (max-width: 640px) {
-        display: none;
-    }
-}
-
-.hero__waterfallMobile {
-    display: none;
-    @media (max-width: 640px) {
-        display: block;
         width: 100%;
         height: auto;
         object-fit: cover;
+        transform: none;
+        mask-image: none;
     }
 }
 
