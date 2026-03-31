@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -147,8 +147,8 @@
           </div>
           <div class="hero__videoWrapper">
             <video class="hero__waterfall" autoplay muted loop playsinline>
-              <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 640px)">
-              <source src="/waterfall.mp4" type="video/mp4" media="(min-width: 641px)">
+              <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
+              <source src="/waterfall.mp4" type="video/mp4">
             </video>
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop" src="/placeholders/waterfall_placeholder.avif"
               alt="" decoding="async" fetchpriority="high" aria-hidden="true">
@@ -199,9 +199,9 @@
               data-deferred-src="/lamps_test.mp4" poster="/placeholders/lamps_test_placeholder.avif"></video>
           </div>
           <div class="invisibleScreen__info">
-            <p class="invisibleScreen__subtitle">
+            <h2 class="invisibleScreen__subtitle">
               <span class="logo">Talk<span>Y</span></span> stays visible only to you.
-            </p>
+            </h2>
             <p class="invisibleScreen__text">It does not appear in screen recordings or screen sharing, so your audience
               sees only your presentation, demo, or video.</p>
           </div>
@@ -339,7 +339,7 @@
               <div class="featuresScreen__mockupWrapper">
                 <div class="featuresScreen__prompterDevice">
                   <div class="featuresScreen__header">
-                    <img src="/camera_eye.avif"></img>
+                    <img src="/camera_eye.avif" alt="camera lens">
                   </div>
                   <div class="demo__telepromter">
                     <div class="demo__shapes">
@@ -500,10 +500,10 @@
           </ul>
           <div class="pricingScreen__cta">
             <div class="purchaseButton__layoutWrapper" id="pricingScreenPurchaseButton">
-              <div class="purchaseButton__spotlight" aria-hidden="true" id="purchase-button-spotlight-left"></div>
-              <div class="purchaseButton__spotlight_right" aria-hidden="true" id="purchase-button-spotlight-right">
+              <div class="purchaseButton__spotlight" aria-hidden="true" id="purchase-button-spotlight-left-b"></div>
+              <div class="purchaseButton__spotlight_right" aria-hidden="true" id="purchase-button-spotlight-right-b">
               </div>
-              <div class="purchaseButton__mainWrapper" id="purchase-button-wrapper">
+              <div class="purchaseButton__mainWrapper" id="purchase-button-wrapper-b">
                 <button class="purchaseButton" type="button" id="pricingScreenPurchaseButtonSpotlight">
                   <span class="purchaseButton__glare" aria-hidden="true"></span>
                   <span class="purchaseButton__content">
@@ -547,7 +547,7 @@
               <video class="supportScreen__video" width="524" height="524" autoplay muted loop playsinline
                 preload="none" poster="/placeholders/24_h_v2_placeholder.avif">
                 <source data-deferred-src="/24_h_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-                <source data-deferred-src="/24_h_v2_x2.mp4" type="video/mp4" media="(min-width: 1025px)">
+                <source data-deferred-src="/24_h_v2_x2.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -556,7 +556,7 @@
         <section class="faqScreen">
           <h2 class="faqScreen__title">FAQ</h2>
           <ul class="faqScreen__list">
-            <span class="faqScreen__questionMark">?</span>
+            <div class="faqScreen__questionMark">?</div>
             <li>
               <details class="faqScreen__item">
                 <summary class="faqScreen__question">

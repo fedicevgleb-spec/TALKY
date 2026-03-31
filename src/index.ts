@@ -12,9 +12,9 @@ const purchaseButtonMouseMoveHandler = (e: MouseEvent, el: HTMLElement | null) =
   const clientWidth = window.innerWidth;
   if (clientWidth < 1024) return;
   if (!el) return;
-  const purchaseButtonWrapper = el.querySelectorAll<HTMLElement>('#purchase-button-wrapper');
-  const purchaseButtonSpotlightLeft = el.querySelectorAll<HTMLElement>('#purchase-button-spotlight-left');
-  const purchaseButtonSpotlightRight = el.querySelectorAll<HTMLElement>('#purchase-button-spotlight-right');
+  const purchaseButtonWrapper = el.querySelectorAll<HTMLElement>('.purchaseButton__mainWrapper');
+  const purchaseButtonSpotlightLeft = el.querySelectorAll<HTMLElement>('.ppurchaseButton__spotlight');
+  const purchaseButtonSpotlightRight = el.querySelectorAll<HTMLElement>('.purchaseButton__spotlight_right');
 
   const rect = el.getBoundingClientRect();
   const left = e.clientX - rect.left;
