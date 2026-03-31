@@ -1,3 +1,4 @@
+import { initFeaturesScreenTeleprompter } from './featuresScreenTeleprompter';
 import { initInvisibleScreenCardGradient } from './invisibleScreenCardGradient';
 import { initVideoMainViewportVolume } from './videoMainViewportVolume';
 
@@ -51,6 +52,7 @@ const purchaseButtonMouseMoveHandler = (e: MouseEvent, el: HTMLElement | null) =
 
 initVideoMainViewportVolume();
 initInvisibleScreenCardGradient();
+initFeaturesScreenTeleprompter();
 heroScreenPurchaseButtonSpotlight?.addEventListener('mousemove', (e: MouseEvent) => purchaseButtonMouseMoveHandler(e, heroScreenPurchaseButton));
 pricingScreenPurchaseButtonSpotlight?.addEventListener('mousemove', (e: MouseEvent) => purchaseButtonMouseMoveHandler(e, pricingScreenPurchaseButton));
 invisibleScreenTitle?.addEventListener('mousemove', (e: MouseEvent) => purchaseButtonMouseMoveHandler(e, invisibleScreenTitle));

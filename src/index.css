@@ -10,6 +10,7 @@
 @import url('./blocks/faqScreen/faqScreen.css');
 @import url('./blocks/footer/footer.css');
 @import url('./blocks/purchaseButton/purchaseButton.css');
+@import url('./blocks/teleprompterDemo/teleprompterDemo.css');
 
 :root {
   --color-primary-white: #F7F7F7;
