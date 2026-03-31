@@ -148,7 +148,7 @@
           <div class="hero__videoWrapper">
             <video class="hero__waterfall" autoplay muted loop playsinline>
               <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 640px)">
-              <source src="/waterfall.mp4" type="video/mp4">
+              <source src="/waterfall.mp4" type="video/mp4" media="(min-width: 641px)">
             </video>
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop" src="/placeholders/waterfall_placeholder.avif"
               alt="" decoding="async" fetchpriority="high" aria-hidden="true">
@@ -256,7 +256,6 @@
             </li>
           </ul>
         </section>
-
         <!-- block 4: macOS features -->
         <section class="featuresScreen">
           <img src="/features_block_bg.webp" srcset="/features_block_bg.png" width="1440" height="526" alt=""
@@ -439,7 +438,6 @@
             </div>
           </div>
         </section>
-
         <!-- block 5: pricing -->
         <section class="pricingScreen">
           <div class="pricingScreen__header">
@@ -522,7 +520,6 @@
             <p class="pricingScreen__note">One-time purchase • Free updates • Direct developer support</p>
           </div>
         </section>
-
         <!-- block 6: support -->
         <section class="supportScreen">
           <div class="supportScreen__inner">
@@ -550,12 +547,11 @@
               <video class="supportScreen__video" width="524" height="524" autoplay muted loop playsinline
                 preload="none" poster="/placeholders/24_h_v2_placeholder.avif">
                 <source data-deferred-src="/24_h_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-                <source data-deferred-src="/24_h_v2_x2.mp4" type="video/mp4">
+                <source data-deferred-src="/24_h_v2_x2.mp4" type="video/mp4" media="(min-width: 1025px)">
               </video>
             </div>
           </div>
         </section>
-
         <!-- block 7: faq -->
         <section class="faqScreen">
           <h2 class="faqScreen__title">FAQ</h2>
@@ -638,7 +634,6 @@
           </ul>
         </section>
       </main>
-
       <!-- footer -->
       <footer class="footer">
         <div class="footer__inner">
@@ -661,7 +656,7 @@
       </footer>
       <script type="module" src="/src/index.ts"></script>
     </div>
-    <video class="footerVideo" width="1440" height="539" muted loop playsinline preload="none"
+    <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
       data-deferred-src="/footer_v1.mp4" poster="/placeholders/footer_v1_placeholder.avif"></video>
   </div>
 </body>
