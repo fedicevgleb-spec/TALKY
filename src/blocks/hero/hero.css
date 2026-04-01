@@ -35,6 +35,7 @@
 .hero__titleWrapper {
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 .hero__title {
@@ -186,6 +187,7 @@
 
 .hero__videoWrapper::after {
     display: none;
+
     @media (max-width: 640px) {
         display: block;
         content: '';
@@ -193,8 +195,102 @@
         inset: 0;
         background-image: linear-gradient(to bottom, transparent 70%, var(--color-primary-black) 100%);
     }
-   
+
 }
+
+.hero__badgesWrapper {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 640px) {
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+.hero__badge {
+    width: 189px;
+    aspect-ratio: 1 / 1;
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25%;
+    position: relative;
+
+    @media (max-width: 640px) {
+        width: 140px;
+        border-radius: 16px;
+        padding: 12px;
+    }
+}
+
+.hero__badge:first-child {
+    box-shadow: 0px 0px 24.8px 0px #0D6FFF inset;
+    background-image: radial-gradient(circle at bottom, #0DBEFF 0%, transparent 75%);
+    z-index: 1;
+}
+
+.hero__badge:nth-child(2),
+.hero__badge:nth-child(3) {
+    box-shadow: 0px 0px 24.8px 0px #B84BA6 inset;
+    background-image: radial-gradient(circle at bottom, #F590E2 0%, transparent 85%);
+
+}
+
+.hero__badge:nth-child(2) {
+    transform: translateY(-25%) translateX(-75%);
+}
+
+.hero__badge:nth-child(3) {
+    transform: translateY(-125%) translateX(75%);
+}
+
+.hero__badgeContent {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hero__badgeTitle {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100%;
+    color: var(--color-primary-white);
+    text-align: center;
+
+    @media (max-width: 640px) {
+        font-size: 16px;
+    }
+}
+
+.hero__badgeSubtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #DCF6FF;
+    text-align: center;
+
+    @media (max-width: 640px) {
+        font-size: 10px;
+    }
+}
+
+.hero__badgeSubtitle_pink {
+    color: #E670E0;
+}
+
+
 
 /* logo */
 .logo {
