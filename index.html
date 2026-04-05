@@ -3,17 +3,45 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <link rel="stylesheet" href="/src/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TALKY</title>
+  <title>TalkY – Teleprompter for macOS | Speak Naturally on Camera</title>
+  <meta name="description" content="TalkY is a macOS teleprompter that keeps your script right next to the camera. Stay on script, maintain eye contact, and stay invisible in screen recordings. $24.50, one-time purchase.">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- <meta name="robots" content="index, follow"> -->
+  <link rel="canonical" href="https://talky.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://talky.com/">
+  <meta property="og:site_name" content="TalkY">
+  <meta property="og:title" content="TalkY – Teleprompter for macOS">
+  <meta property="og:description" content="Keep your script next to the camera. Speak naturally, maintain eye contact, stay invisible in recordings. One-time purchase, $24.50.">
+  <meta property="og:image" content="https://talky.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TalkY – Teleprompter for macOS">
+  <meta name="twitter:description" content="Keep your script next to the camera. Speak naturally, invisible in recordings. $24.50 one-time.">
+  <meta name="twitter:image" content="https://talky.com/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="/src/index.css">
 </head>
 
 <body>
   <div>
     <!-- header -->
     <header class="header">
-      <img src="/camera_eye.avif" width="20" height="20" alt="camera eye" class="header__image">
+      <img src="/camera_eye.avif" width="20" height="20" alt="" class="header__image">
       <div class="header__container">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="none"
           style="position: relative; top: -1px;">
@@ -53,7 +81,7 @@
           <path fill="#000" fill-opacity=".2"
             d="M2.8755 12.6064q-.8062 0-1.46-.3554-.6474-.3492-1.0346-.9712-.381-.622-.3809-1.441 0-.8187.3809-1.4409.3872-.622 1.0346-.9711.6539-.3555 1.46-.3555h6.6079q.8061 0 1.4536.3555.6539.349 1.0347.9711.3872.6221.3872 1.441 0 .8188-.3872 1.4409-.3809.622-1.0347.9712-.6475.3554-1.4536.3554zm6.773-1.2504q.4125 0 .7553-.2095.3428-.2031.5459-.5523.2095-.349.2158-.7744 0-.4125-.2031-.749-.2031-.3428-.5522-.5459-.3429-.2031-.7618-.2031t-.7617.2031a1.534 1.534 0 0 0-.5459.5459q-.2031.3428-.2031.7617t.2031.7617.546.5459q.3426.2095.7616.2159M3.1356 6.1001q-.8886 0-1.5996-.3809T.4126 4.6528Q.0001 3.961 0 3.0532q0-.9141.4126-1.5996Q.8252.7617 1.5361.381 2.2471-.0001 3.1357 0h6.0874q.8887 0 1.5997.3809t1.1235 1.0727q.4126.6855.4126 1.5996 0 .9078-.4126 1.5996-.4126.6855-1.1235 1.0664-.711.381-1.5997.3809zm0-1.2759H9.223q.5079 0 .9268-.2222.4253-.2285.6792-.6284t.2539-.9204q0-.5268-.2539-.9204-.254-.4-.6792-.622-.419-.2286-.9268-.2286H3.1357q-.5077 0-.933.2285a1.76 1.76 0 0 0-.673.6221q-.2538.3936-.2538.9204 0 .5205.2539.9204t.6728.6285q.4254.222.9331.2221m0-.4126q-.3808 0-.6919-.184-.3046-.1841-.4887-.4952-.1778-.311-.1778-.6855t.1778-.6856q.184-.311.4887-.495.311-.1842.692-.1842.3808 0 .6918.1841a1.34 1.34 0 0 1 .4952.4888q.1841.3047.1777.6855 0 .381-.184.692a1.44 1.44 0 0 1-.4952.5014q-.3046.1841-.6856.1777" />
         </svg>
-        <span class="header__item">Mon Jun 10 9:41 AM</span>
+        <span class="header__item" id="header-datetime"></span>
       </div>
       <div class="header__topGradient"></div>
       <div class="header__telepromter">
@@ -182,8 +210,10 @@
           </div>
           <div class="hero__videoWrapper">
             <video class="hero__waterfall" autoplay muted loop playsinline>
-              <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-              <source src="/waterfall.mp4" type="video/mp4">
+              <!-- <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 1024px)"> -->
+              <source src="/videos/01_waterfall_av1_mobile_x1.mp4" type="video/mp4" media="(max-width: 1024px)">
+              <!-- <source src="/waterfall.mp4" type="video/mp4"> -->
+              <source src="/videos/01_waterfall_av1.mp4" type="video/mp4">
             </video>
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop"
               src="/placeholders/waterfall_placeholder.avif" alt="" decoding="async" fetchpriority="high"
@@ -214,8 +244,8 @@
                 </div>
               </div>
             </div>
-            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none"
-              data-deferred-src="/borders_x1.mp4"></video>
+            <!-- <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none" data-deferred-src="/borders_x1.mp4"></video> -->
+            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none" data-deferred-src="/videos/02_borders_av1_x1.mp4"></video>
           </div>
           <div class="videoScreen__textWrapper">
             <h2 class="videoScreen__title">
@@ -233,7 +263,7 @@
         <section class="invisibleScreen">
           <div class="invisibleScreen__bgVideoWrapper">
             <video class="invisibleScreen__bgVideo" autoplay muted loop playsinline preload="none"
-              data-deferred-src="/lamps_test.mp4" poster="/placeholders/lamps_test_placeholder.avif"></video>
+              data-deferred-src="/videos/03_lamps_av1_x2.mp4" poster="/placeholders/lamps_test_placeholder.avif"></video>
           </div>
           <div class="invisibleScreen__info">
             <h2 class="invisibleScreen__subtitle">
@@ -376,7 +406,7 @@
               <div class="featuresScreen__mockupWrapper">
                 <div class="featuresScreen__prompterDevice">
                   <div class="featuresScreen__header">
-                    <img src="/camera_eye.avif" alt="camera lens">
+                    <img src="/camera_eye.avif" alt="">
                   </div>
                   <div class="demo__telepromter">
                     <div class="demo__shapes">
@@ -597,8 +627,8 @@
             <div class="supportScreen__videoMobileWrapper">
               <video class="supportScreen__video" width="524" height="524" autoplay muted loop playsinline
                 preload="none" poster="/placeholders/24_h_v2_placeholder.avif">
-                <source data-deferred-src="/24_h_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-                <source data-deferred-src="/24_h_v2_x2.mp4" type="video/mp4">
+                <source data-deferred-src="/videos/04_hours_av1_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
+                <source data-deferred-src="/videos/04_hours_av1.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -700,16 +730,83 @@
           <p class="footer__note">macOS 14.7 or later</p>
         </div>
         <nav class="footer__nav">
-          <a href="#" class="footer__navItem">Support</a>
-          <a href="#" class="footer__navItem">Privacy</a>
-          <a href="#" class="footer__navItem">Terms</a>
+          <a href="/support" target="_blank" class="footer__navItem">Support</a>
+          <a href="/privacy" target="_blank" class="footer__navItem">Privacy</a>
+          <a href="/terms" target="_blank" class="footer__navItem">Terms</a>
         </nav>
       </footer>
       <script type="module" src="/src/index.ts"></script>
     </div>
     <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
-      data-deferred-src="/footer_v1.mp4" poster="/placeholders/footer_v1_placeholder.avif"></video>
+      data-deferred-src="/videos/05_waves_av1.mp4" poster="/placeholders/footer_v1_placeholder.avif"></video>
   </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TalkY",
+    "url": "https://talky.com",
+    "operatingSystem": "macOS 14.7+",
+    "applicationCategory": "ProductivityApplication",
+    "description": "A teleprompter for macOS that keeps your script visible next to the camera while remaining invisible in screen recordings.",
+    "offers": {
+      "@type": "Offer",
+      "price": "24.50",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2027-01-01"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I install TalkY after purchase?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After completing your purchase, you will receive an email with a download link. Download the ZIP file, extract it, and move TalkY to your Applications folder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I receive updates to the app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TalkY is actively maintained and improved. Whenever a new version is released, you will receive an email with a link to download the updated version. All updates are included with your one-time purchase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there customer support if I need help?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Support is available to all TalkY users. If you have any issues or questions, you can contact the developers directly. We guarantee a response within 24 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is TalkY a subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. TalkY is a one-time purchase. You pay $24.50 once and can use the app forever."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TalkY work on Windows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. TalkY is built specifically for macOS and requires macOS 14.7 or later."
+        }
+      }
+    ]
+  }
+  </script>
 </body>
 
 </html>

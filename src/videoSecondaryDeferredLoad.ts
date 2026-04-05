@@ -25,11 +25,20 @@ function waitForVideoReady(video: HTMLVideoElement | null): Promise<void> {
   });
 }
 
+function resolveDeferredSrc(video: HTMLVideoElement): string | null {
+  const srcset = video.getAttribute('data-deferred-srcset');
+  if (srcset && window.devicePixelRatio >= 2) {
+    return srcset;
+  }
+  return video.getAttribute('data-deferred-src');
+}
+
 function hydrateDeferredVideo(video: HTMLVideoElement): void {
-  const deferredSrc = video.getAttribute('data-deferred-src');
+  const deferredSrc = resolveDeferredSrc(video);
   if (deferredSrc) {
     video.src = deferredSrc;
     video.removeAttribute('data-deferred-src');
+    video.removeAttribute('data-deferred-srcset');
   } else {
     for (const source of video.querySelectorAll<HTMLSourceElement>('source[data-deferred-src]')) {
       const url = source.getAttribute('data-deferred-src');
