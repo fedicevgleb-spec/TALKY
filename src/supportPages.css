@@ -2,6 +2,7 @@
 @import url('./vendors/fonts.css');
 @import url('./blocks/header/header.css');
 @import url('./blocks/footer/footer.css');
+@import url('./blocks/logo/logo.css');
 
 :root {
   --color-primary-white: #F7F7F7;
@@ -86,16 +87,6 @@ body > div {
   z-index: -1;
   object-fit: fill;
   max-height: 600px;
-}
-
-/* Logo */
-.logo {
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.logo span {
-  color: var(--color-primary-blue);
 }
 
 /* Text page layout */

@@ -38,16 +38,6 @@
     display: flex;
 }
 
-.logo_footer {
-    font-size: 75px;
-    @media (max-width: 1024px) {
-        font-size: 58px;
-    }
-    @media (max-width: 640px) {
-        font-size: 40px;
-    }
-}
-
 .footer__title {
     font-size: 75px;
     font-weight: 600;

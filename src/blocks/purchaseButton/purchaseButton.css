@@ -125,6 +125,10 @@
     }
 }
 
+.purchaseButton__text_gray {
+    color: var(--color-primary-gray);
+}
+
 .purchaseButton__wrapper {
     font-weight: 600;
     font-size: 22px;

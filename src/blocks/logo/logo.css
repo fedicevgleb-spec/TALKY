@@ -1,0 +1,28 @@
+/* logo */
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 19px;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 16px;
+    }
+}
+
+.logo_footer {
+    font-size: 75px;
+    @media (max-width: 1024px) {
+        font-size: 58px;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+    }
+}
+
+.logo span {
+    color: var(--color-primary-blue);
+}
