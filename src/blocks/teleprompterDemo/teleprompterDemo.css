@@ -312,7 +312,7 @@
 
 .demo__telepromterColumn {
     margin: 0;
-    padding: 0 4px 160px;
+    padding: 0 4px 50px;
     color: var(--color-tertiary-white);
     font-size: 24px;
     font-weight: 500;
@@ -322,7 +322,7 @@
     @media (max-width: 640px) {
         font-size: 14px;
         line-height: 24px;
-        padding: 0 4px 80px;
+        padding: 0 4px 30px;
     }
 }
 
@@ -350,13 +350,13 @@
 }
 
 @keyframes featuresSpeedThumbPulse {
-    0%, 100% { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), 0 0 0 0px rgba(255, 255, 255, 0.15); }
-    50%       { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), 0 0 0 6px rgba(255, 255, 255, 0.15); }
+    0%, 100% { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 0px rgba(208, 96, 201, 0.2); }
+    50%       { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 12px rgba(208, 96, 201, 0.2); }
 }
 
 @keyframes featuresPlayBtnPulse {
-    0%, 100% { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 0px rgba(13, 111, 255, 0.2); }
-    50%       { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 12px rgba(13, 111, 255, 0.2); }
+    0%, 100% { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 0px rgba(208, 96, 201, 0.2); }
+    50%       { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 12px rgba(208, 96, 201, 0.2); }
 }
 
 @media (prefers-reduced-motion: reduce) {
