@@ -1,4 +1,4 @@
-const MIN_PX_PER_S = 9;
+const MIN_PX_PER_S = 18;
 const MAX_PX_PER_S = 88;
 const DEFAULT_SPEED = 0.45;
 
@@ -80,6 +80,8 @@ export function initFeaturesScreenTeleprompter(): void {
     return;
   }
 
+  const speedThumb = sliderTrack.querySelector<HTMLElement>('.featuresScreen__speedThumb');
+
   const setFromClientX = (clientX: number) => {
     const rect = sliderTrack.getBoundingClientRect();
     const x = clientX - rect.left;
@@ -87,6 +89,7 @@ export function initFeaturesScreenTeleprompter(): void {
   };
 
   sliderTrack.addEventListener('pointerdown', (e) => {
+    speedThumb?.classList.add('featuresScreen__speedThumb_interacted');
     sliderTrack.setPointerCapture(e.pointerId);
     setFromClientX(e.clientX);
   });
@@ -121,6 +124,7 @@ export function initFeaturesScreenTeleprompter(): void {
   });
 
   playBtn?.addEventListener('click', () => {
+    playBtn.classList.add('featuresScreen__playBtn_interacted');
     const playing = playBtn.classList.toggle('featuresScreen__playBtn_playing');
     track.classList.toggle('featuresScreen__teleprompterTrack_paused', !playing);
     playBtn.setAttribute('aria-pressed', playing ? 'true' : 'false');

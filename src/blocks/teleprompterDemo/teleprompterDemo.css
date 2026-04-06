@@ -110,11 +110,16 @@
     color: var(--color-tertiary-white);
     box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    animation: featuresPlayBtnPulse 2s ease-in-out infinite;
 
     @media (max-width: 1024px) {
         width: 44px;
         height: 44px;
     }
+}
+
+.featuresScreen__playBtn_interacted {
+    animation: none;
 }
 
 .featuresScreen__playBtn svg {
@@ -159,7 +164,7 @@
 .featuresScreen__speedSlider {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 .featuresScreen__speedIcon {
@@ -204,6 +209,7 @@
 
 .featuresScreen__speedThumb {
     position: absolute;
+    transform: translateX(-35%);
     top: 50%;
     left: calc(var(--speed) * 100%);
     width: 38px;
@@ -214,6 +220,11 @@
     background: var(--color-tertiary-white);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
     pointer-events: none;
+    animation: featuresSpeedThumbPulse 2s ease-in-out infinite;
+}
+
+.featuresScreen__speedThumb_interacted {
+    animation: none;
 }
 
 
@@ -332,6 +343,16 @@
     margin-top: 8px;
 }
 
+@keyframes featuresSpeedThumbPulse {
+    0%, 100% { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), 0 0 0 0px rgba(255, 255, 255, 0.15); }
+    50%       { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), 0 0 0 6px rgba(255, 255, 255, 0.15); }
+}
+
+@keyframes featuresPlayBtnPulse {
+    0%, 100% { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 0px rgba(13, 111, 255, 0.2); }
+    50%       { box-shadow: 0 4px 16px rgba(13, 111, 255, 0.45), 0 0 0 12px rgba(13, 111, 255, 0.2); }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .demo__telepromterTrack {
         animation: none;
@@ -345,6 +366,11 @@
 
     .demo__telepromterColumn[aria-hidden="true"] {
         display: none;
+    }
+
+    .featuresScreen__speedThumb,
+    .featuresScreen__playBtn {
+        animation: none;
     }
 }
 

@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    z-index: 2;
 }
 
 .header__image {
@@ -122,7 +123,7 @@
 
 .header__telepromterColumn {
     margin: 0;
-    padding: 0 4px 160px;
+    padding: 0 4px 50px;
     color: var(--color-tertiary-white);
     font-size: 24px;
     font-weight: 500;
@@ -132,7 +133,7 @@
     @media (max-width: 640px) {
         font-size: 14px;
         line-height: 24px;
-        padding: 0 4px 80px;
+        padding: 0 4px 20px;
     }
 }
 

@@ -14,6 +14,7 @@
     }
     @media (max-width: 640px) {
         gap: 40px;
+        padding-top: 0px;
     }
 }
 

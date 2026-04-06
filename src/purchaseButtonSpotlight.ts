@@ -3,7 +3,7 @@ function purchaseButtonMouseMoveHandler(e: MouseEvent, el: HTMLElement | null): 
   if (!el) return;
 
   const purchaseButtonWrapper = el.querySelectorAll<HTMLElement>('.purchaseButton__mainWrapper');
-  const purchaseButtonSpotlightLeft = el.querySelectorAll<HTMLElement>('.ppurchaseButton__spotlight');
+  const purchaseButtonSpotlightLeft = el.querySelectorAll<HTMLElement>('.purchaseButton__spotlight');
   const purchaseButtonSpotlightRight = el.querySelectorAll<HTMLElement>('.purchaseButton__spotlight_right');
 
   const rect = el.getBoundingClientRect();
