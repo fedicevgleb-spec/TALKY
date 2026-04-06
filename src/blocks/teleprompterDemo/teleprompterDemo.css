@@ -185,6 +185,12 @@
     touch-action: none;
 }
 
+.featuresScreen__speedTrack::before {
+    content: '';
+    position: absolute;
+    inset: -12px 0;
+}
+
 .featuresScreen__speedTrackMarkers {
     position: absolute;
     inset: 0 8px;
