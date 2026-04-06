@@ -188,7 +188,7 @@
 .featuresScreen__speedTrack::before {
     content: '';
     position: absolute;
-    inset: -12px 0;
+    inset: -12px -20px;
 }
 
 .featuresScreen__speedTrackMarkers {
