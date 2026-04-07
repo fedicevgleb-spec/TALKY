@@ -29,6 +29,8 @@
     content="Keep your script next to the camera. Speak naturally, invisible in recordings. $24.50 one-time.">
   <meta name="twitter:image" content="https://talky.com/og-image.png">
 
+  <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -219,14 +221,24 @@
             </div>
           </div>
           <div class="hero__videoWrapper">
-            <video class="hero__waterfall" autoplay muted loop playsinline>
-              <source src="/videos/01_waterfall_av1_mobile.mp4" type="video/mp4" media="(max-width: 1024px)" type="video/mp4; codecs=av01.0.05M.08">
-              <source src="/videos/01_waterfall_h265_mobile.mp4" type="video/mp4" media="(max-width: 1024px)" type="video/mp4; codecs=hvc1">
-              <source src="/videos/01_waterfall_v9_mobile.webm" type="video/webm" media="(max-width: 1024px)" type="video/webm; codecs=vp9">
-              <source src="/videos/01_waterfall_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
-              <source src="/videos/01_waterfall_h265.mp4" type="video/mp4; codecs=hvc1">
+            <video class="hero__waterfall" autoplay muted loop playsinline loading="lazy">
+              <source src="/videos/01_waterfall_v9_mobile.webm" type="video/webm; codecs=vp9"
+                media="(max-width: 1024px)">
+              <source src="/videos/01_waterfall_h265_mobile.mp4" type="video/mp4; codecs=hvc1"
+                media="(max-width: 1024px)">
               <source src="/videos/01_waterfall_v9.webm" type="video/webm; codecs=vp9">
+              <source src="/videos/01_waterfall_h265.mp4" type="video/mp4; codecs=hvc1">
             </video>
+            <script>
+              (function () {
+                var v = document.querySelector('.hero__waterfall');
+                var m = window.innerWidth <= 1024;
+                if (m) {
+                  v.innerHTML = '<source src="/videos/01_waterfall_v9_mobile.webm" type="video/webm; codecs=vp9"><source src="/videos/01_waterfall_h265_mobile.mp4" type="video/mp4; codecs=hvc1">';
+                  v.load();
+                }
+              })();
+            </script>
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop"
               src="/placeholders/waterfall_placeholder.avif" alt="" decoding="async" fetchpriority="high"
               aria-hidden="true">
@@ -780,8 +792,8 @@
     </div>
     <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
       poster="/placeholders/footer_v1_placeholder.avif">
-      <source data-deferred-src="/videos/05_waves_av1.mp4"  type="video/mp4; codecs=av01.0.05M.08">
-      <source data-deferred-src="/videos/05_waves_v9.webm"  type="video/webm">
+      <source data-deferred-src="/videos/05_waves_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+      <source data-deferred-src="/videos/05_waves_v9.webm" type="video/webm">
       <source data-deferred-src="/videos/05_waves_h265.mp4" type="video/mp4; codecs=hvc1">
     </video>
   </div>
