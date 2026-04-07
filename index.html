@@ -220,10 +220,12 @@
           </div>
           <div class="hero__videoWrapper">
             <video class="hero__waterfall" autoplay muted loop playsinline>
-              <!-- <source src="/waterfall_mobile.mp4" type="video/mp4" media="(max-width: 1024px)"> -->
-              <source src="/videos/01_waterfall_av1_mobile_x1.mp4" type="video/mp4" media="(max-width: 1024px)">
-              <!-- <source src="/waterfall.mp4" type="video/mp4"> -->
-              <source src="/videos/01_waterfall_av1.mp4" type="video/mp4">
+              <source src="/videos/01_waterfall_av1_mobile.mp4" type="video/mp4" media="(max-width: 1024px)" type="video/mp4; codecs=av01.0.05M.08">
+              <source src="/videos/01_waterfall_h265_mobile.mp4" type="video/mp4" media="(max-width: 1024px)" type="video/mp4; codecs=hvc1">
+              <source src="/videos/01_waterfall_v9_mobile.webm" type="video/webm" media="(max-width: 1024px)" type="video/webm; codecs=vp9">
+              <source src="/videos/01_waterfall_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+              <source src="/videos/01_waterfall_h265.mp4" type="video/mp4; codecs=hvc1">
+              <source src="/videos/01_waterfall_v9.webm" type="video/webm; codecs=vp9">
             </video>
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop"
               src="/placeholders/waterfall_placeholder.avif" alt="" decoding="async" fetchpriority="high"
@@ -240,8 +242,9 @@
             <div class="videoScreen__videoWrapper">
               <div class="videoScreen__mainVideoWrapper">
                 <video class="videoScreen__mainVideo" width="815" height="529" autoplay muted loop playsinline>
-                  <source src="/talky_main.mp4" type="video/mp4">
-                  <source src="/talky_main.webm" type="video/webm">
+                  <source src="/videos/talky_main_hevc.mp4" type="video/mp4">
+                  <source src="/videos/talky_main.webm" type="video/webm">
+                  <source src="/videos/talky_main_av1.mp4" type="video/mp4">
                 </video>
                 <div class="videoScreen__muteIndicator" id="videoScreenMuteIndicator" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -254,9 +257,11 @@
                 </div>
               </div>
             </div>
-            <!-- <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none" data-deferred-src="/borders_x1.mp4"></video> -->
-            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none"
-              data-deferred-src="/videos/02_borders_av1_x1.mp4"></video>
+            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none">
+              <source data-deferred-src="/videos/02_borders_av1_x1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+              <source data-deferred-src="/videos/02_borders_v9_x1.webm" type="video/webm">
+              <source data-deferred-src="/videos/02_borders_h265_x1.mp4" type="video/mp4; codecs=hvc1">
+            </video>
           </div>
           <div class="videoScreen__textWrapper">
             <h2 class="videoScreen__title">
@@ -274,8 +279,11 @@
         <section class="invisibleScreen">
           <div class="invisibleScreen__bgVideoWrapper">
             <video class="invisibleScreen__bgVideo" autoplay muted loop playsinline preload="none"
-              data-deferred-src="/videos/03_lamps_av1_x2.mp4"
-              poster="/placeholders/lamps_test_placeholder.avif"></video>
+              poster="/placeholders/lamps_test_placeholder.avif">
+              <source data-deferred-src="/videos/03_lamps_av1_x2.mp4" type="video/mp4; codecs=av01.0.05M.08">
+              <source data-deferred-src="/videos/03_lamps_v9_x2.webm" type="video/webm">
+              <source data-deferred-src="/videos/03_lamps_h265_x2.mp4" type="video/mp4; codecs=hvc1">
+            </video>
           </div>
           <div class="invisibleScreen__info">
             <h2 class="invisibleScreen__subtitle">
@@ -655,7 +663,13 @@
                 preload="none" poster="/placeholders/24_h_v2_placeholder.avif">
                 <source data-deferred-src="/videos/04_hours_av1_mobile.mp4" type="video/mp4"
                   media="(max-width: 1024px)">
+                <source data-deferred-src="/videos/04_hours_h265_mobile.mp4" type="video/mp4"
+                  media="(max-width: 1024px)">
+                <source data-deferred-src="/videos/04_hours_v9_mobile.webm" type="video/webm"
+                  media="(max-width: 1024px)">
                 <source data-deferred-src="/videos/04_hours_av1.mp4" type="video/mp4">
+                <source data-deferred-src="/videos/04_hours_h265.mp4" type="video/mp4">
+                <source data-deferred-src="/videos/04_hours_v9.webm" type="video/webm">
               </video>
             </div>
           </div>
@@ -765,7 +779,11 @@
       <script type="module" src="/src/index.ts"></script>
     </div>
     <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
-      data-deferred-src="/videos/05_waves_av1.mp4" poster="/placeholders/footer_v1_placeholder.avif"></video>
+      poster="/placeholders/footer_v1_placeholder.avif">
+      <source data-deferred-src="/videos/05_waves_av1.mp4"  type="video/mp4; codecs=av01.0.05M.08">
+      <source data-deferred-src="/videos/05_waves_v9.webm"  type="video/webm">
+      <source data-deferred-src="/videos/05_waves_h265.mp4" type="video/mp4; codecs=hvc1">
+    </video>
   </div>
 
   <script type="application/ld+json">
