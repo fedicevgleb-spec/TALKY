@@ -37,14 +37,14 @@ function hydrateDeferredVideo(video: HTMLVideoElement): void {
   const deferredSrc = resolveDeferredSrc(video);
   if (deferredSrc) {
     video.src = deferredSrc;
-    // video.removeAttribute('data-deferred-src');
-    // video.removeAttribute('data-deferred-srcset');
+    video.removeAttribute('data-deferred-src');
+    video.removeAttribute('data-deferred-srcset');
   } else {
     for (const source of video.querySelectorAll<HTMLSourceElement>('source[data-deferred-src]')) {
       const url = source.getAttribute('data-deferred-src');
       if (!url) continue;
       source.src = url;
-      // source.removeAttribute('data-deferred-src');
+      source.removeAttribute('data-deferred-src');
     }
   }
   video.load();
