@@ -45,6 +45,7 @@
        position: relative;
        top: auto;
        transform: translateY(0%);
+       min-height: 240px;
      }
 }
 
@@ -59,6 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .videoScreen__mainVideoWrapper {
