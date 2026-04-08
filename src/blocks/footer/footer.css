@@ -16,6 +16,10 @@
     }
 }
 
+.footer * {
+    z-index: 1;
+}
+
 .footer_thanksPage {
     @media (max-width: 1080px) {
         padding-top: 0;
