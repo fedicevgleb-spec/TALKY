@@ -171,7 +171,7 @@
           <p class="downloadBlock__footerNote" style="opacity: 0.5;">
             Need help? Contact us anytime — we reply within 24 hours
           </p>
-          <a  class="downloadBlock__footerNote" href="mailto:talkyhelpapp@gmail.com">
+          <a class="downloadBlock__footerNote" href="mailto:talkyhelpapp@gmail.com">
             talkyhelpapp@gmail.com
           </a>
         </div>
@@ -179,8 +179,12 @@
     </footer>
     <script type="module" src="/src/index.ts"></script>
   </div>
-  <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline src="/videos/05_waves_av1.mp4"
-    poster="/placeholders/footer_v1_placeholder.avif"></video>
+  <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
+    poster="/placeholders/footer_v1_placeholder.avif">
+    <source src="/videos/05_waves_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+    <source src="/videos/05_waves_v9.webm" type="video/webm codecs=vp9">
+    <source src="/videos/05_waves_h265.mp4" type="video/mp4; codecs=hvc1">
+  </video>
   <script type="module" src="/src/thanks.ts"></script>
   </div>
 </body>

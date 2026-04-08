@@ -276,7 +276,12 @@
       <script type="module" src="/src/supportPages.ts"></script>
     </div>
 
-    <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline src="/videos/05_waves_av1.mp4" poster="/placeholders/footer_v1_placeholder.avif"></video>
+    <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
+      poster="/placeholders/footer_v1_placeholder.avif">
+      <source src="/videos/05_waves_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+      <source src="/videos/05_waves_v9.webm" type="video/webm codecs=vp9">
+      <source src="/videos/05_waves_h265.mp4" type="video/mp4; codecs=hvc1">
+    </video>
   </div>
 </body>
 
