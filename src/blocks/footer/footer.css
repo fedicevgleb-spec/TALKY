@@ -16,6 +16,12 @@
     }
 }
 
+.footer_thanksPage {
+    @media (max-width: 1080px) {
+        padding-top: 0;
+    }
+}
+
 .footer__inner {
     display: flex;
     flex-direction: column;

@@ -53,6 +53,17 @@ export function initVideoMainViewportVolume(): void {
   observer.observe(el);
   syncMuteIndicator();
 
+  if (useMobilePause) {
+    const refreshIntersection = (): void => {
+      observer.unobserve(el);
+      observer.observe(el);
+    };
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') refreshIntersection();
+    });
+    window.addEventListener('pageshow', refreshIntersection);
+  }
+
   el.addEventListener('click', () => {
     el.muted = !el.muted;
     applyVolume();

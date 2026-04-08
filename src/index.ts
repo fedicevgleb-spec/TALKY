@@ -3,6 +3,7 @@ import { initHeaderDatetime } from './headerDatetime';
 import { initHeroWaterfallPlaceholder } from './heroWaterfallPlaceholder';
 import { initInvisibleScreenCardGradient } from './invisibleScreenCardGradient';
 import { initPurchaseButtonSpotlight } from './purchaseButtonSpotlight';
+import { initVideoResumeOnVisibility } from './videoResumeOnVisibility';
 import { initVideoSecondaryDeferredLoad } from './videoSecondaryDeferredLoad';
 import { initVideoMainViewportVolume } from './videoMainViewportVolume';
 
@@ -13,6 +14,8 @@ initHeroWaterfallPlaceholder();
 initHeaderDatetime();
 // less important videos load controller
 initVideoSecondaryDeferredLoad();
+// resume decorative videos after tab / screen unlock
+initVideoResumeOnVisibility();
 // volume controller for video main viewport
 initVideoMainViewportVolume();
 // invisible screen cards gradients animation controller

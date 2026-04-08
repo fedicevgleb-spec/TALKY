@@ -10,7 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         refund: resolve(__dirname, 'refund.html'),
-        thanks: resolve(__dirname, 'thanks.html'),
+        thanks88: resolve(__dirname, 'thanks88.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
       },

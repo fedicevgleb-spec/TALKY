@@ -205,6 +205,7 @@
     height: 100%;
     transform: translateY(0);
     transition: transform 0.15s ease-in-out;
+    border-radius: 16px;
 }
 
 .featuresScreen__tagWrapper:hover {

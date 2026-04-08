@@ -9,4 +9,4 @@ User-agent: PerplexityBot
 Allow: /
 User-agent: Googlebot-Extended
 Allow: /
-Sitemap: https://talky.com/sitemap.xml
+Sitemap: https://talky-app.tech/sitemap.xml
