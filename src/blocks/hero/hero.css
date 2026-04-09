@@ -122,7 +122,8 @@
     }
 
     @media (max-width: 640px) {
-        max-height: 60vh;
+        height: 598px;
+        /* max-height: 60vh; */
     }
 }
 
