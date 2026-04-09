@@ -237,10 +237,10 @@
               })();
             </script>
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_desktop"
-              src="/placeholders/waterfall_placeholder.avif" alt="" decoding="async" fetchpriority="high"
+              src="/placeholders/waterfall_placeholder.webp" alt="" decoding="async" fetchpriority="high"
               aria-hidden="true">
             <img class="hero__waterfallPlaceholder hero__waterfallPlaceholder_mobile"
-              src="/placeholders/waterfall_mobile_placeholder.avif" alt="" decoding="async" fetchpriority="high"
+              src="/placeholders/waterfall_mobile_placeholder.webp" alt="" decoding="async" fetchpriority="high"
               aria-hidden="true">
           </div>
         </section>
@@ -251,8 +251,8 @@
             <div class="videoScreen__videoWrapper">
               <div class="videoScreen__mainVideoWrapper">
                 <video class="videoScreen__mainVideo" width="815" height="529" autoplay muted loop playsinline poster="/placeholders/talky_poster.avif">
+                  <source src="/videos/talky_main.webm" type="video/webm; codecs=vp9">
                   <source src="/videos/talky_main_hevc.mp4" type="video/mp4">
-                  <source src="/videos/talky_main.webm" type="video/webm">
                   <source src="/videos/talky_main_av1.mp4" type="video/mp4">
                 </video>
                 <div class="videoScreen__muteIndicator" id="videoScreenMuteIndicator" aria-hidden="true">
@@ -266,9 +266,9 @@
                 </div>
               </div>
             </div>
-            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none">
+            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none" poster="/placeholders/borders_placeholder.webp">
+              <source data-deferred-src="/videos/02_borders_v9.webm" type="video/webm; codecs=vp9">
               <source data-deferred-src="/videos/02_borders_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
-              <source data-deferred-src="/videos/02_borders_v9.webm" type="video/webm">
               <source data-deferred-src="/videos/02_borders_h265.mp4" type="video/mp4; codecs=hvc1">
             </video>
           </div>
@@ -288,7 +288,7 @@
         <section class="invisibleScreen">
           <div class="invisibleScreen__bgVideoWrapper">
             <video class="invisibleScreen__bgVideo" autoplay muted loop playsinline preload="none"
-              poster="/placeholders/lamps_test_placeholder.avif">
+              poster="/placeholders/lamps_test_placeholder.webp">
               <source data-deferred-src="/videos/03_lamps_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
               <source data-deferred-src="/videos/03_lamps_v9.webm" type="video/webm">
               <source data-deferred-src="/videos/03_lamps_h265.mp4" type="video/mp4; codecs=hvc1">
@@ -788,7 +788,7 @@
      
     </div>
     <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
-      poster="/placeholders/footer_v1_placeholder.avif">
+      poster="/placeholders/footer_v1_placeholder.webp">
       <source data-deferred-src="/videos/05_waves.webm" type="video/webm">
       <source data-deferred-src="/videos/05_waves_h265.mp4" type="video/mp4">
       <source data-deferred-src="/videos/05_waves_av1.mp4" type="video/mp4">
