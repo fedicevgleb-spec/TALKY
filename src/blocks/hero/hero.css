@@ -11,9 +11,11 @@
 
     @media (max-width: 1024px) {
         padding: 16px;
+        padding-bottom: 80px;
         flex-direction: column-reverse;
         justify-content: flex-end;
         gap: 16px;
+        min-height: auto;
     }
 }
 
