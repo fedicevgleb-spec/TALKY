@@ -1,7 +1,7 @@
 import { initHeaderDatetime } from './headerDatetime';
-import { initVideoResumeOnVisibility } from './videoResumeOnVisibility';
+import { initVideoVisibilityPlayback } from './videoVisibilityPlayback';
 
 // real current datetime in header
 initHeaderDatetime();
-// resume decorative videos after tab / screen unlock
-initVideoResumeOnVisibility();
+// play/pause footer (and any) decorative videos by viewport
+initVideoVisibilityPlayback();

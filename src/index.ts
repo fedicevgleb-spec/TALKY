@@ -3,9 +3,9 @@ import { initHeaderDatetime } from './headerDatetime';
 import { initHeroWaterfallPlaceholder } from './heroWaterfallPlaceholder';
 import { initInvisibleScreenCardGradient } from './invisibleScreenCardGradient';
 import { initPurchaseButtonSpotlight } from './purchaseButtonSpotlight';
-import { initVideoResumeOnVisibility } from './videoResumeOnVisibility';
 import { initVideoSecondaryDeferredLoad } from './videoSecondaryDeferredLoad';
 import { initVideoMainViewportVolume } from './videoMainViewportVolume';
+import { initVideoVisibilityPlayback } from './videoVisibilityPlayback';
 
 
 // placeholdres for hero video (depends on the viewport width)
@@ -14,8 +14,8 @@ initHeroWaterfallPlaceholder();
 initHeaderDatetime();
 // less important videos load controller
 initVideoSecondaryDeferredLoad();
-// resume decorative videos after tab / screen unlock
-initVideoResumeOnVisibility();
+// play/pause decorative videos by viewport; tab refresh via unobserve/observe
+initVideoVisibilityPlayback();
 // volume controller for video main viewport
 initVideoMainViewportVolume();
 // invisible screen cards gradients animation controller

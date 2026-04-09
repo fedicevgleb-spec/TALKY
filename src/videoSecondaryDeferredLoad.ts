@@ -2,6 +2,8 @@ const PRIMARY_SELECTORS = ['.hero__waterfall', '.videoScreen__mainVideo'] as con
 const SECONDARY_SELECTOR =
   '.videoScreen__bgVideo, .invisibleScreen__bgVideo, .supportScreen__video, .footerVideo';
 
+import { syncDecorativeVideoPlayback } from './videoVisibilityPlayback';
+
 const PRIMARY_READY_TIMEOUT_MS = 12000;
 
 function waitForVideoReady(video: HTMLVideoElement | null): Promise<void> {
@@ -60,6 +62,7 @@ async function runSecondaryDeferredLoad(): Promise<void> {
   const secondaries = document.querySelectorAll<HTMLVideoElement>(SECONDARY_SELECTOR);
   for (const video of secondaries) {
     hydrateDeferredVideo(video);
+    syncDecorativeVideoPlayback(video);
   }
 }
 

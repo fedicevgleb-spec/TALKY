@@ -251,8 +251,8 @@
             <div class="videoScreen__videoWrapper">
               <div class="videoScreen__mainVideoWrapper">
                 <video class="videoScreen__mainVideo" width="815" height="529" autoplay muted loop playsinline poster="/placeholders/talky_poster.avif">
-                  <source src="/videos/talky_main.webm" type="video/webm; codecs=vp9">
                   <source src="/videos/talky_main_hevc.mp4" type="video/mp4">
+                  <source src="/videos/talky_main.webm" type="video/webm; codecs=vp9">
                   <source src="/videos/talky_main_av1.mp4" type="video/mp4">
                 </video>
                 <div class="videoScreen__muteIndicator" id="videoScreenMuteIndicator" aria-hidden="true">
@@ -289,9 +289,9 @@
           <div class="invisibleScreen__bgVideoWrapper">
             <video class="invisibleScreen__bgVideo" autoplay muted loop playsinline preload="none"
               poster="/placeholders/lamps_test_placeholder.webp">
+              <source data-deferred-src="/videos/03_lamps_h265.mp4" type="video/mp4; codecs=hvc1">
               <source data-deferred-src="/videos/03_lamps_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
               <source data-deferred-src="/videos/03_lamps_v9.webm" type="video/webm">
-              <source data-deferred-src="/videos/03_lamps_h265.mp4" type="video/mp4; codecs=hvc1">
             </video>
           </div>
           <div class="invisibleScreen__info">
