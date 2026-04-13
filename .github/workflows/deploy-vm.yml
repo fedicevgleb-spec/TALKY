@@ -1,0 +1,32 @@
+# Deploy: add Actions secret VM_SSH_PRIVATE_KEY (private key for root@72.56.105.125).
+# On the VM, ensure /home/frontend exists and root can write there; pubkey in ~/.ssh/authorized_keys.
+name: Deploy to VM
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VM_SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: ssh-keyscan -H 72.56.105.125 >> ~/.ssh/known_hosts
+
+      - name: Rsync dist to server
+        run: rsync -avz --delete -e ssh dist/ root@72.56.105.125:/home/frontend/
