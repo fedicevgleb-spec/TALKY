@@ -1,0 +1,44 @@
+# TalkY
+
+> TalkY is a native macOS teleprompter that keeps your script visible right next to your camera lens, so you read naturally while maintaining direct eye contact. It stays completely invisible during screen recordings and screen sharing — your audience never sees it.
+
+TalkY is for content creators, educators, product managers, and anyone who speaks on camera and wants to look confident without memorizing a script.
+
+## Key features
+
+- Script appears next to the camera — eye contact feels natural, not rehearsed
+- Invisible in screen recordings and screen sharing — zero distraction for viewers
+- Smooth, adjustable scroll speed controlled with a simple slider
+- Always-on-top window — works alongside Zoom, QuickTime, OBS, or any app
+- Clean, distraction-free interface native to macOS
+
+## Use cases
+
+- Recording tutorials and educational content
+- Product demos and walkthroughs
+- Live presentations and webinars
+- Online meetings where staying on message matters
+- YouTube videos, podcasts with video, social content
+
+## Pricing and availability
+
+- Price: $24.50 one-time purchase
+- No subscription, no recurring payments
+- Free future updates included with purchase
+- MacOS 15.6 or later required
+- Available at: https://talky-app.tech/
+
+## Frequently asked questions
+
+- How do I install TalkY? After purchase you receive an email with a download link. Unzip and move to Applications.
+- Are updates free? Yes, all future updates are included with the one-time purchase.
+- Is there support? Yes — contact developers directly, response within 24 hours.
+- Does it work on Windows? No, TalkY is macOS only.
+- Is it a subscription? No. Pay $24.50 once, use forever.
+
+## Links
+
+- Homepage: https://talky-app.tech/
+- Support: https://talky-app.tech/support
+- Privacy Policy: https://talky-app.tech/privacy
+- Terms of Service: https://talky-app.tech/terms

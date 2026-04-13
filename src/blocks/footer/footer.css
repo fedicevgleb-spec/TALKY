@@ -1,0 +1,118 @@
+.footer {
+    width: 100%;
+    padding: 150px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 146px;
+
+    @media (max-width: 1024px) {
+        gap: 120px;
+        padding: 125px 0 50px;
+    }
+    @media (max-width: 640px) {
+        gap: 80px;
+        padding: 100px 0 20px;
+    }
+}
+
+.footer * {
+    z-index: 1;
+}
+
+.footer_thanksPage {
+    @media (max-width: 1080px) {
+        padding-top: 0;
+    }
+}
+
+.footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: 1024px) {
+        gap: 30px;
+    }
+    @media (max-width: 640px) {
+        gap: 12px;
+    }
+}
+.footer__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__titleWrapper {
+    display: flex;
+}
+
+.footer__title {
+    font-size: 75px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 110%;
+    filter: drop-shadow(0 -2px 3px rgba(180, 180, 180, .9));
+    background-image: linear-gradient(180deg, #FFFFFF 30%, #B4B4B4 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    @media (max-width: 1024px) {
+        font-size: 58px;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+        filter: drop-shadow(0 -1px 2px rgba(180, 180, 180, .9));
+    }
+}
+
+.footer__title_add {
+    margin-top: -20px;
+    @media (max-width: 1024px) {
+        margin-top: -15px;
+    }
+    @media (max-width: 640px) {
+        margin-top: -10px;
+    }
+}
+
+.footer__title span {
+    font-size: 75px;
+    font-weight: 600;
+}
+
+.footer__note {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-primary-gray);
+
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    gap: 32px;
+}
+
+.footer__navItem {
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.2s;
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+    @media (max-width: 640px) {
+        font-size: 12px;
+    }
+}
+
+.footer__navItem:hover {
+    color: var(--color-primary-white);
+}

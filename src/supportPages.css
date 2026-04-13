@@ -1,0 +1,240 @@
+@import url('./vendors/normalize.css');
+@import url('./vendors/fonts.css');
+@import url('./blocks/header/header.css');
+@import url('./blocks/footer/footer.css');
+@import url('./blocks/logo/logo.css');
+
+:root {
+  --color-primary-white: #F7F7F7;
+  --color-secondary-white: #D1D1D1;
+  --color-tertiary-white: #FFFFFF;
+  --color-primary-gray: #7C7C7C;
+  --color-primary-black: #000000;
+  --color-secondary-black: #121212;
+  --color-primary-blue: #0D6FFF;
+  --color-primary-pink: #F03CCE;
+  --color-pink-60: #F363D8;
+  background-color: var(--color-primary-black);
+  color: var(--color-primary-white);
+  font-family: 'SF Pro Display', 'Arial', sans-serif;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-primary-blue);
+  outline-offset: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body, main {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+body > div {
+  overflow-x: hidden;
+}
+
+.mainWrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footerVideo {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  object-fit: fill;
+  max-height: 600px;
+}
+
+/* Text page layout */
+.textPage {
+  padding: 100px 24px 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    padding: 80px 32px 130px;
+  }
+  @media (max-width: 640px) {
+    padding: 60px 20px 100px;
+  }
+}
+
+.textPage__inner {
+  width: 100%;
+  max-width: 720px;
+}
+
+.textPage__heading {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 110%;
+  margin-bottom: 12px;
+  background-image: linear-gradient(180deg, #FFFFFF 30%, #B4B4B4 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  @media (max-width: 1024px) {
+    font-size: 38px;
+  }
+  @media (max-width: 640px) {
+    font-size: 28px;
+  }
+}
+
+.textPage__meta {
+  font-size: 15px;
+  color: var(--color-primary-gray);
+  margin-bottom: 56px;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+}
+
+.textPage__divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 40px 0;
+
+  @media (max-width: 640px) {
+    margin: 28px 0;
+  }
+}
+
+.textPage__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.textPage__sectionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary-gray);
+}
+
+.textPage__sectionHeading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-primary-white);
+  margin-bottom: 4px;
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
+}
+
+.textPage__text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-secondary-white);
+
+  @media (max-width: 640px) {
+    font-size: 15px;
+  }
+}
+
+.textPage__text + .textPage__text {
+  margin-top: 10px;
+}
+
+.textPage__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.textPage__list li {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-secondary-white);
+
+  @media (max-width: 640px) {
+    font-size: 15px;
+  }
+}
+
+.textPage__link {
+  color: var(--color-primary-white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  transition: text-decoration-color 0.2s;
+}
+
+.textPage__link:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.textPage__backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary-gray);
+  margin-bottom: 48px;
+  transition: color 0.2s;
+
+  @media (max-width: 640px) {
+    margin-bottom: 32px;
+  }
+}
+
+.textPage__backLink:hover {
+  color: var(--color-primary-white);
+}

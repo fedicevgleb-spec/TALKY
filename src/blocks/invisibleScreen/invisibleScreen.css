@@ -1,0 +1,286 @@
+.invisibleScreen {
+    width: 100%;
+    padding: 200px 50px 100px;
+    padding-bottom: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+
+    @media (max-width: 1024px) {
+        padding: 0px 16px 50px;
+        overflow: hidden;
+    }
+    @media (max-width: 640px) {
+        gap: 40px;
+        padding-top: 0px;
+    }
+}
+
+.invisibleScreen__bgVideoWrapper {
+    position: relative;
+    width: calc(100% + 100px);
+    z-index: -1;
+
+    @media (max-width: 640px) {
+        min-height: 188px;
+    }
+}
+
+.invisibleScreen__bgVideo {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.3);
+}
+
+.invisibleScreen__bg {
+    top: -225px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+
+    @media (max-width: 1024px) {
+        top: -300px;
+        min-width: 1000px;
+    }
+    @media (max-width: 640px) {
+        top: -250px;
+        min-width: 750px;
+    }
+    @media (max-width: 500px) {
+        top: -200px;
+        min-width: 750px;
+    }
+    @media (max-width: 400px) {
+        top: -180px;
+        min-width: 750px;
+    }
+}
+
+
+.invisibleScreen__header {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.invisibleScreen__title {
+    position: relative;
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 65px;
+    max-width: 650px;
+    text-align: center;
+    align-self: center;
+
+    @media (max-width: 1024px) {
+        font-size: 58px;
+        padding-bottom: 0;
+        line-height: 90%;
+    }
+    @media (max-width: 640px) {
+        font-size: 40px;
+    }
+}
+
+.invisibleScreen__titleDefault {
+    color: var(--color-primary-blue);
+    cursor: default;
+    opacity: .75;
+}
+
+.invisibleScreen__titleHighlight {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #ff9ec5, #c4a5ff, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    pointer-events: none;
+    mask-image: radial-gradient(
+            circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            black,
+            transparent);
+    -webkit-mask-image: radial-gradient(
+            circle 120px at var(--mouse-x, 20%) var(--mouse-y, 20%),
+            black,
+            transparent);
+}
+
+.invisibleScreen__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 977px;
+    text-align: center;
+}
+
+.invisibleScreen__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 17px;
+    }
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
+}
+
+.invisibleScreen__text {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 25px;
+        max-width: 65%;
+    }
+    @media (max-width: 750px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        font-size: 18px;
+        max-width: 100%;
+    }
+}
+
+.invisibleScreen__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 65%;
+    }
+    @media (max-width: 750px) {
+        max-width: 80%;
+    }
+    @media (max-width: 640px) {
+        max-width: 100%;
+        gap: 16px;
+    }
+}
+
+
+.invisibleScreen__cardWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+}
+
+.invisibleScreen__cardGlow {
+    position: absolute;
+    inset: -1%;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 40px;
+    background-image: radial-gradient(
+        120% 120% at var(--grad-x, 0%) var(--grad-y, 100%),
+        rgba(0, 103, 255, 0.55) 0%,
+        rgba(241, 255, 162, 0.4) 48%,
+        rgba(255, 94, 247, 0.45) 100%
+    );
+    filter: blur(56px);
+    opacity: 0.78;
+}
+
+.invisibleScreen__card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background-color: var(--color-secondary-black);
+    border-radius: 32px;
+    background-image: radial-gradient(100% 100% at var(--grad-x, 0%) var(--grad-y, 100%), #0067FF 0%, #F1FFA2 50%, #FF5EF7 100%);
+    @media (max-width: 640px) {
+        border-radius: 19px;
+        padding: 3px;
+    }
+}
+
+.invisibleScreen__cardContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-secondary-black);
+    border-radius: 26px;
+    padding: 32px;
+
+    @media (max-width: 1024px) {
+        padding: 24px;
+    }
+    @media (max-width: 640px) {
+        padding: 16px;
+        border-radius: 16px;
+    }
+}
+
+.invisibleScreen__cardIcon {
+    width: fit-content;
+    position: relative;
+    --bg-pos-left: 0px;
+    --bg-pos-top: 0px;
+    --bg-width: 100%;
+    --bg-height: 100%;
+
+    @media (max-width: 400px) {
+       transform: scale(0.5);
+       left: -10%;
+       top: -10%;
+    }
+}
+.invisibleScreen__cardIcon img {
+    position: relative;
+    z-index: 1;
+}
+
+.invisibleScreen__cardIcon:before {
+    content: '';
+    position: absolute;
+    top: var(--bg-pos-top);
+    left: var(--bg-pos-left);
+    width: var(--bg-width);
+    height: var(--bg-height);
+    background-image: radial-gradient(circle at center, rgba(16,110,252, .25) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.invisibleScreen__cardLabel {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 20px;
+    }
+    @media (max-width: 640px) {
+        font-size: 15px;
+    }
+}
