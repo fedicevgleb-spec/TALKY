@@ -107,3 +107,14 @@ body > div {
   object-fit: fill;
   max-height: 600px;
 }
+
+/* Thanks / payment-failed: slightly faster header teleprompter than the main site (60s) */
+.header--fastTeleprompter .header__telepromterTrack {
+  animation-duration: 20s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header--fastTeleprompter .header__telepromterTrack {
+    animation: none;
+  }
+}

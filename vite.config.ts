@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         refund: resolve(__dirname, 'refund/index.html'),
         thanks88: resolve(__dirname, 'thanks88/index.html'),
+        paymentFailed: resolve(__dirname, 'payment-failed/index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         terms: resolve(__dirname, 'terms/index.html'),
       },
