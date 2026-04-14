@@ -21,6 +21,12 @@
     }
 }
 
+a.purchaseButton {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .purchaseButton__layoutWrapper {
     width: fit-content;
     height: 58px;
