@@ -1,3 +1,4 @@
+import { initCheckoutButtons } from './checkout';
 import { initFeaturesScreenTeleprompter } from './featuresScreenTeleprompter';
 import { initHeaderDatetime } from './headerDatetime';
 import { initHeroWaterfallPlaceholder } from './heroWaterfallPlaceholder';
@@ -24,3 +25,5 @@ initInvisibleScreenCardGradient();
 initFeaturesScreenTeleprompter();
 // purchase button animation controller
 initPurchaseButtonSpotlight();
+// Stripe Checkout (Flask `app.py` in repo root — same origin when served by Flask)
+initCheckoutButtons();
