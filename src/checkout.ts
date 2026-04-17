@@ -33,12 +33,18 @@ async function startCheckout(): Promise<void> {
 }
 
 export function initCheckoutButtons(): void {
-  const ids = ['heroScreenPurchaseButtonSpotlight', 'pricingScreenPurchaseButtonSpotlight'];
-  for (const id of ids) {
+  // Clicks on the glow (`.purchaseButton__spotlight*`) hit those divs, not the inner `<button>`.
+  // Listen on the whole layout wrapper in capture phase so one click works anywhere in the pill.
+  const wrapperIds = ['heroScreenPurchaseButton', 'pricingScreenPurchaseButton'];
+  for (const id of wrapperIds) {
     const el = document.getElementById(id);
-    el?.addEventListener('click', (e) => {
-      e.preventDefault();
-      void startCheckout();
-    });
+    el?.addEventListener(
+      'click',
+      (e) => {
+        e.preventDefault();
+        void startCheckout();
+      },
+      true,
+    );
   }
 }

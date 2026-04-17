@@ -33,6 +33,7 @@ a.purchaseButton {
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -59,6 +60,7 @@ a.purchaseButton {
     border-radius: 55px;
     z-index: -1;
     filter: blur(2px);
+    pointer-events: none;
 
     @media (max-width: 1024px) {
         display: none;
@@ -75,6 +77,7 @@ a.purchaseButton {
     border-radius: 55px;
     z-index: -1;
     filter: blur(2px);
+    pointer-events: none;
 
     @media (max-width: 1024px) {
         display: none;
