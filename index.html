@@ -35,6 +35,21 @@
   <meta name="theme-color" content="#000000">
 
   <link rel="stylesheet" href="/src/index.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=109306318', 'ym');
+
+    ym(109306318, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/109306318" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -173,7 +188,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="hero__badgesWrapper">
             <div class="hero__badge">
               <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -249,7 +264,8 @@
 
             <div class="videoScreen__videoWrapper">
               <div class="videoScreen__mainVideoWrapper">
-                <video class="videoScreen__mainVideo" width="815" height="529" autoplay muted loop playsinline poster="/placeholders/talky_poster.avif">
+                <video class="videoScreen__mainVideo" width="815" height="529" autoplay muted loop playsinline
+                  poster="/placeholders/talky_poster.avif">
                   <source src="/videos/talky_main_hevc.mp4" type="video/mp4">
                   <source src="/videos/talky_main.webm" type="video/webm; codecs=vp9">
                   <source src="/videos/talky_main_av1.mp4" type="video/mp4">
@@ -265,7 +281,8 @@
                 </div>
               </div>
             </div>
-            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none" poster="/placeholders/borders_placeholder.webp">
+            <video class="videoScreen__bgVideo" width="935" height="659" autoplay muted loop playsinline preload="none"
+              poster="/placeholders/borders_placeholder.webp">
               <source data-deferred-src="/videos/02_borders_v9.webm" type="video/webm; codecs=vp9">
               <source data-deferred-src="/videos/02_borders_av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
               <source data-deferred-src="/videos/02_borders_h265.mp4" type="video/mp4; codecs=hvc1">
@@ -784,7 +801,7 @@
           <a href="/terms" target="_blank" class="footer__navItem">Terms</a>
         </nav>
       </footer>
-     
+
     </section>
     <video class="footerVideo" width="1440" height="539" muted autoplay loop playsinline
       poster="/placeholders/footer_v1_placeholder.webp">
@@ -794,7 +811,7 @@
     </video>
   </div>
 
-  
+
 
   <script type="application/ld+json">
   {
